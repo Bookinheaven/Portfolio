@@ -1,0 +1,123 @@
+{
+  "personal": {
+    "name": "Tanvik Sri Ram Reddy",
+    "initials": "TS",
+    "role1": "SOFTWARE",
+    "role2": "ENGINEER",
+    "tagline": "I build AI-powered applications, scalable backend systems, and modern web experiences. Passionate about creating software that solves real-world problems through intelligent design and engineering.",
+    "email": "tanviksriram@gmail.com",
+    "location": "Andhra Pradesh, India",
+    "resumeUrl": "/resume.pdf",
+    "availability": "Open to internships, collaborations, and Software Engineering opportunities"
+  },
+  "socials": {
+    "gmail": "mailto:tanviksriram@gmail.com",
+    "discord": "https://discord.com",
+    "twitter": "https://twitter.com/",
+    "linkedin": "https://www.linkedin.com/in/tanvik-sri-ram-reddy/",
+    "github": "https://github.com/Bookinheaven"
+  },
+  "about": {
+    "heading": "About",
+    "paragraphs": [
+      "I'm a Software Engineering student at Karunya Institute of Technology and Sciences, passionate about building intelligent software that combines Artificial Intelligence, backend engineering, and thoughtful user experiences. I enjoy turning ambitious ideas into production-ready applications while constantly learning new technologies.",
+      "My current focus is on developing AI-powered productivity software, scalable backend architectures, and full-stack applications. I'm also strengthening my skills in Data Structures & Algorithms, System Design, and Competitive Programming to become a well-rounded software engineer."
+    ],
+    "image": "/images/profile.jpg"
+  },
+  "skills": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "Kotlin",
+    "HTML",
+    "CSS",
+    "React",
+    "Node.js",
+    "Express.js",
+    "FastAPI",
+    "MongoDB",
+    "PostgreSQL",
+    "SQL",
+    "Tailwind CSS",
+    "Java Swing",
+    "Git",
+    "Linux",
+    "Docker"
+  ],
+  "projects": [
+    {
+      "title": "Athena",
+      "category": "React, Express.js, MongoDB, JWT, FastAPI",
+      "image": "/images/projects/athena.png",
+      "startDate": "2026",
+      "endDate": "Present",
+      "link": "https://github.com/Bookinheaven",
+      "description": [
+        "Building a full-stack productivity platform combining focus sessions, a task planner, adaptive streak tracking, and behavioral analytics.",
+        "Implemented secure authentication with JWT and OTP verification, and designed interactive dashboards to visualize productivity trends over time."
+      ]
+    },
+    {
+      "title": "ResQit",
+      "category": "Java, JavaFX, JDBC, PostgreSQL",
+      "image": "/images/projects/resqit.png",
+      "startDate": "2024",
+      "endDate": "2024",
+      "link": "https://github.com/Bookinheaven",
+      "description": [
+        "Built a disaster-response coordination system with role-based access for administrators, volunteers, and requesters.",
+        "Integrated PostgreSQL via JDBC and developed a JavaFX desktop interface with secure login and team-management features."
+      ]
+    },
+    {
+      "title": "AquaTrack",
+      "category": "Python, PostgreSQL, CustomTkinter",
+      "image": "/images/projects/aquatrack.png",
+      "startDate": "2024",
+      "endDate": "2024",
+      "link": "https://github.com/Bookinheaven",
+      "description": [
+        "Developed a desktop hydration-tracking application with user authentication, daily progress analytics, and historical intake visualizations.",
+        "Designed a responsive GUI with PostgreSQL integration, customizable themes, and per-user profile management."
+      ]
+    },
+    {
+      "title": "InsightEX",
+      "category": "Python, YOLOv8, DeepSORT, OpenVINO",
+      "image": "/images/projects/insightex.png",
+      "startDate": "2024",
+      "endDate": "2024",
+      "link": "https://github.com/Bookinheaven",
+      "description": [
+        "Led a team in developing an AI-powered retail analytics system for customer tracking, heatmap generation, and real-time insights."
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Oracle Cloud Infrastructure 2025 Data Science Professional",
+      "issuer": "Oracle",
+      "year": "2025",
+      "link": "#"
+    },
+    {
+      "title": "Google Cloud Data Analytics",
+      "issuer": "Google Cloud Skills Boost",
+      "year": "2024",
+      "link": "#"
+    },
+    {
+      "title": "Android 14 & Kotlin Development Masterclass",
+      "issuer": "Udemy",
+      "year": "2024",
+      "link": "#"
+    },
+    {
+      "title": "Java Programming Fundamentals",
+      "issuer": "Infosys Springboard",
+      "year": "2023",
+      "link": "#"
+    }
+  ]
+}

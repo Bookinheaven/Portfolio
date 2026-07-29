@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-vercel-bg: #000000;
+  --color-vercel-accents-1: #111111;
+  --color-vercel-accents-2: #333333;
+  --color-vercel-accents-3: #444444;
+  --color-vercel-accents-4: #666666;
+  --color-vercel-accents-5: #888888;
+  --color-vercel-accents-6: #999999;
+  --color-vercel-accents-7: #eaeaea;
+  --color-vercel-accents-8: #fafafa;
+  
+  --color-vercel-foreground: #ffffff;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+@layer base {
+  :root {
+    --background: var(--color-vercel-bg);
+    --foreground: var(--color-vercel-foreground);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-vercel-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-vercel-accents-2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-vercel-accents-4);
+}
+
+/* Vercel Style Card */
+.vercel-card {
+  background: var(--color-vercel-bg);
+  border: 1px solid var(--color-vercel-accents-2);
+  border-radius: 8px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.vercel-card:hover {
+  border-color: var(--color-vercel-accents-4);
+}
+
+/* Edge Glow Button */
+.edge-glow {
+  position: relative;
+  background: var(--color-vercel-bg);
+  border: 1px solid var(--color-vercel-accents-2);
+  border-radius: 6px;
+  color: var(--color-vercel-foreground);
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.edge-glow:hover {
+  border-color: var(--color-vercel-foreground);
+  background: var(--color-vercel-accents-1);
+}
+
+.edge-glow-solid {
+  background: var(--color-vercel-foreground);
+  color: var(--color-vercel-bg);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.edge-glow-solid:hover {
+  background: var(--color-vercel-accents-7);
+}
+
+/* Grid Background */
+.bg-grid {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+}
+
+/* Ambient Background Glow */
+.ambient-glow {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(62,100,255,0.15) 0%, rgba(0,0,0,0) 70%);
+  filter: blur(80px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Gradient Text */
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-accent {
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Flashlight Effect Card */
+.flashlight-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.flashlight-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y), 
+    rgba(255, 255, 255, 0.4),
+    transparent 40%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.flashlight-card:hover::before {
+  opacity: 1;
+}
+
+.flashlight-content {
+  position: relative;
+  background: var(--color-vercel-bg);
+  border-radius: inherit;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
