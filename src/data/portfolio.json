@@ -2,97 +2,386 @@
   "personal": {
     "name": "Tanvik Sri Ram Reddy",
     "initials": "TS",
-    "role1": "SOFTWARE",
-    "role2": "ENGINEER",
-    "tagline": "I build AI-powered applications, scalable backend systems, and modern web experiences. Passionate about creating software that solves real-world problems through intelligent design and engineering.",
+    "role": "Software Engineer",
+    "tagline": "I build AI-powered applications, scalable backend systems, and modern web experiences.",
     "email": "tanviksriram@gmail.com",
     "location": "Andhra Pradesh, India",
     "resumeUrl": "/resume.pdf",
     "availability": "Open to internships, collaborations, and Software Engineering opportunities"
   },
-  "socials": {
-    "gmail": "mailto:tanviksriram@gmail.com",
-    "discord": "https://discord.com/users/751028800720207902",
-    "x": "https://x.com/tanviksriram",
-    "linkedin": "https://www.linkedin.com/in/tanvik-sri-ram-reddy/",
-    "github": "https://github.com/Bookinheaven",
-    "leetcode": "https://leetcode.com/u/tanvik-sri-ram-reddy/"
-  },
+  "socials": [
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/Bookinheaven",
+      "icon": "github"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/in/tanvik-sri-ram-reddy/",
+      "icon": "linkedin"
+    },
+    {
+      "platform": "LeetCode",
+      "url": "https://leetcode.com/u/tanvik-sri-ram-reddy/",
+      "icon": "leetcode"
+    },
+    {
+      "platform": "X",
+      "url": "https://x.com/tanviksriram",
+      "icon": "twitter"
+    },
+    {
+      "platform": "Discord",
+      "url": "https://discord.com/users/751028800720207902",
+      "icon": "discord"
+    },
+    {
+      "platform": "Email",
+      "url": "mailto:tanviksriram@gmail.com",
+      "icon": "mail"
+    }
+  ],
   "about": {
-    "heading": "About",
-    "paragraphs": [
-      "I'm a Software Engineering student at Karunya Institute of Technology and Sciences, passionate about building intelligent software that combines Artificial Intelligence, backend engineering, and thoughtful user experiences. I enjoy turning ambitious ideas into production-ready applications while constantly learning new technologies.",
-      "My current focus is on developing AI-powered productivity software, scalable backend architectures, and full-stack applications. I'm also strengthening my skills in Data Structures & Algorithms, System Design, and Competitive Programming to become a well-rounded software engineer."
+    "story": [
+      "I'm a Software Engineering student at Karunya Institute of Technology and Sciences, passionate about building intelligent software that combines Artificial Intelligence, backend engineering, and thoughtful user experiences.",
+      "My current focus is on developing AI-powered productivity software, scalable backend architectures, and full-stack applications. I'm also strengthening my skills in Data Structures & Algorithms, System Design, and Competitive Programming."
     ],
-    "image": "/images/profile.jpg"
+    "currentFocus": [
+      "Full-stack engineering",
+      "Backend systems",
+      "AI / ML",
+      "UI / UX"
+    ],
+    "currentlyExploring": [
+      "Transformers",
+      "System Design",
+      "Backend architecture",
+      "AI engineering"
+    ]
   },
   "skills": [
-    "Java",
-    "Python",
-    "JavaScript",
-    "Kotlin",
-    "HTML",
-    "CSS",
-    "React",
-    "Node.js",
-    "Express.js",
-    "FastAPI",
-    "MongoDB",
-    "PostgreSQL",
-    "SQL",
-    "Tailwind CSS",
-    "Java Swing",
-    "Git",
-    "Linux",
-    "Docker"
+    {
+      "id": "java",
+      "name": "Java",
+      "category": "Languages"
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "category": "Languages"
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "category": "Languages"
+    },
+    {
+      "id": "react",
+      "name": "React",
+      "category": "Frontend"
+    },
+    {
+      "id": "nodejs",
+      "name": "Node.js",
+      "category": "Backend"
+    },
+    {
+      "id": "express",
+      "name": "Express.js",
+      "category": "Backend"
+    },
+    {
+      "id": "fastapi",
+      "name": "FastAPI",
+      "category": "Backend"
+    },
+    {
+      "id": "mongodb",
+      "name": "MongoDB",
+      "category": "Database"
+    },
+    {
+      "id": "postgresql",
+      "name": "PostgreSQL",
+      "category": "Database"
+    },
+    {
+      "id": "jwt",
+      "name": "JWT",
+      "category": "Tools"
+    },
+    {
+      "id": "yolov8",
+      "name": "YOLOv8",
+      "category": "AI / ML"
+    },
+    {
+      "id": "deepsort",
+      "name": "DeepSORT",
+      "category": "AI / ML"
+    },
+    {
+      "id": "openvino",
+      "name": "OpenVINO",
+      "category": "AI / ML"
+    },
+    {
+      "id": "tailwindcss",
+      "name": "Tailwind CSS",
+      "category": "Frontend"
+    }
   ],
   "projects": [
     {
+      "id": "athena",
       "title": "Athena",
-      "category": "React, Express.js, MongoDB, JWT, FastAPI",
-      "image": "/images/projects/athena.png",
-      "startDate": "2026",
-      "endDate": "Present",
-      "link": "https://github.com/Bookinheaven/Athena",
-      "description": [
-        "Building a full-stack productivity platform combining focus sessions, a task planner, adaptive streak tracking, and behavioral analytics.",
-        "Implemented secure authentication with JWT and OTP verification, and designed interactive dashboards to visualize productivity trends over time."
-      ]
+      "subtitle": "Productivity platform",
+      "status": "In Development",
+      "featured": true,
+      "order": 1,
+      "period": {
+        "start": "2026",
+        "end": "Present"
+      },
+      "tags": [
+        "Full Stack",
+        "Productivity"
+      ],
+      "skills": [
+        "react",
+        "express",
+        "mongodb",
+        "jwt",
+        "fastapi"
+      ],
+      "heroImage": "/images/projects/athena/dashboard-1.png",
+      "links": {
+        "github": "https://github.com/Bookinheaven/Athena",
+        "live": null,
+        "demo": null
+      },
+      "overview": {
+        "problem": "People struggle to maintain focus and track productivity over long periods without getting overwhelmed by complex tools.",
+        "solution": "A full-stack productivity platform combining focus sessions, a task planner, adaptive streak tracking, and behavioral analytics.",
+        "role": "Full-stack Developer"
+      },
+      "gallery": [
+        {
+          "src": "/images/projects/athena/dashboard-1.png",
+          "type": "hero",
+          "title": "Dashboard",
+          "description": "Visualizes productivity trends and focus-session data."
+        },
+        {
+          "src": "/images/projects/athena/dashboard-2.png",
+          "type": "hero1",
+          "title": "Dashboard2",
+          "description": "Visualizes productivity trends and focus-session data."
+        },
+        {
+          "src": "/images/projects/athena/quick-session.png",
+          "type": "hero2",
+          "title": "Quick Session",
+          "description": "Focus session with timer"
+        },
+        {
+          "src": "/images/projects/athena/profile.png",
+          "type": "hero3",
+          "title": "Profile",
+          "description": "Profile"
+        },
+        {
+          "src": "/images/projects/athena/themes.png",
+          "type": "hero4",
+          "title": "Themes Settings",
+          "description": "Themes settings"
+        },
+        {
+          "src": "/images/projects/athena/planner.png",
+          "type": "hero5",
+          "title": "Planner",
+          "description": "Planner"
+        }
+      ],
+      "features": [
+        {
+          "name": "Focus Sessions",
+          "description": "Customizable pomodoro and deep work timers."
+        },
+        {
+          "name": "Adaptive Streaks",
+          "description": "Intelligent streak tracking that adapts to user behavior."
+        },
+        {
+          "name": "Behavioral Analytics",
+          "description": "Visual dashboards to understand productivity patterns."
+        }
+      ],
+      "technicalDecisions": [
+        {
+          "decision": "Using MongoDB for behavioral analytics",
+          "technology": "MongoDB",
+          "reasoning": "Flexible schema allows for storing varied daily tracking data points without rigid migrations."
+        }
+      ],
+      "architecture": null,
+      "challenges": [],
+      "metrics": [],
+      "learnings": [],
+      "future": []
     },
     {
+      "id": "resqit",
       "title": "ResQit",
-      "category": "Java, JavaFX, JDBC, PostgreSQL",
-      "image": "/images/projects/resqit.png",
-      "startDate": "2024",
-      "endDate": "2024",
-      "link": "https://github.com/Bookinheaven/ResQit",
-      "description": [
-        "Built a disaster-response coordination system with role-based access for administrators, volunteers, and requesters.",
-        "Integrated PostgreSQL via JDBC and developed a JavaFX desktop interface with secure login and team-management features."
-      ]
+      "subtitle": "Disaster-response coordination system",
+      "status": "Completed",
+      "featured": true,
+      "order": 2,
+      "period": {
+        "start": "2024",
+        "end": "2024"
+      },
+      "tags": [
+        "Backend System"
+      ],
+      "skills": [
+        "java",
+        "postgresql"
+      ],
+      "heroImage": "/images/projects/resqit.png",
+      "links": {
+        "github": "https://github.com/Bookinheaven/ResQit",
+        "live": null,
+        "demo": null
+      },
+      "overview": {
+        "problem": "Lack of unified platforms for coordinating disaster response among admins, volunteers, and requesters.",
+        "solution": "A Java-based coordination system with role-based access control and team management features.",
+        "role": "Backend Developer"
+      },
+      "gallery": [
+        {
+          "src": "/images/projects/resqit.png",
+          "type": "hero",
+          "title": "System Interface",
+          "description": "Main control panel for role-based access."
+        }
+      ],
+      "features": [
+        {
+          "name": "Role-based Access",
+          "description": "Distinct interfaces for administrators, volunteers, and requesters."
+        },
+        {
+          "name": "Team Management",
+          "description": "Tools for organizing and deploying volunteer teams."
+        }
+      ],
+      "technicalDecisions": [
+        {
+          "decision": "Choosing PostgreSQL with JDBC",
+          "technology": "PostgreSQL & JDBC",
+          "reasoning": "Provided strong relational data integrity for user roles and deployment records."
+        }
+      ],
+      "architecture": null,
+      "challenges": [],
+      "metrics": [],
+      "learnings": [],
+      "future": []
     },
     {
+      "id": "aquatrack",
       "title": "AquaTrack",
-      "category": "Python, PostgreSQL, CustomTkinter",
-      "image": "/images/projects/aquatrack.png",
-      "startDate": "2024",
-      "endDate": "2024",
-      "link": "https://github.com/Bookinheaven/AquaTrack",
-      "description": [
-        "Developed a desktop hydration-tracking application with user authentication, daily progress analytics, and historical intake visualizations.",
-        "Designed a responsive GUI with PostgreSQL integration, customizable themes, and per-user profile management."
-      ]
+      "subtitle": "Desktop hydration-tracking application",
+      "status": "Completed",
+      "featured": false,
+      "order": 3,
+      "period": {
+        "start": "2024",
+        "end": "2024"
+      },
+      "tags": [
+        "Desktop Application"
+      ],
+      "skills": [
+        "python",
+        "postgresql"
+      ],
+      "heroImage": "/images/projects/aquatrack.png",
+      "links": {
+        "github": "https://github.com/Bookinheaven/AquaTrack",
+        "live": null,
+        "demo": null
+      },
+      "overview": {
+        "problem": "Users needed a lightweight desktop app to track hydration without relying on mobile apps.",
+        "solution": "A Python GUI application with user authentication, daily analytics, and historical visualizations.",
+        "role": "Developer"
+      },
+      "gallery": [
+        {
+          "src": "/images/projects/aquatrack.png",
+          "type": "hero",
+          "title": "Analytics Dashboard",
+          "description": "Daily progress and historical intake visualizations."
+        }
+      ],
+      "features": [],
+      "technicalDecisions": [],
+      "architecture": null,
+      "challenges": [],
+      "metrics": [],
+      "learnings": [],
+      "future": []
     },
     {
+      "id": "insightex",
       "title": "InsightEX",
-      "category": "Python, YOLOv8, DeepSORT, OpenVINO",
-      "image": "/images/projects/insightex.png",
-      "startDate": "2024",
-      "endDate": "2024",
-      "link": "https://github.com/Bookinheaven/InsightEX",
-      "description": [
-        "Led a team in developing an AI-powered retail analytics system for customer tracking, heatmap generation, and real-time insights."
-      ]
+      "subtitle": "Computer vision retail analytics system",
+      "status": "Completed",
+      "featured": true,
+      "order": 4,
+      "period": {
+        "start": "2024",
+        "end": "2024"
+      },
+      "tags": [
+        "Computer Vision",
+        "Analytics"
+      ],
+      "skills": [
+        "python",
+        "yolov8",
+        "deepsort",
+        "openvino"
+      ],
+      "heroImage": "/images/projects/insightex.png",
+      "links": {
+        "github": "https://github.com/Bookinheaven/InsightEX",
+        "live": null,
+        "demo": null
+      },
+      "overview": {
+        "problem": "Retailers needed real-time insights into customer movement and store hotspots.",
+        "solution": "A computer vision pipeline utilizing YOLOv8 and DeepSORT for customer tracking and heatmap generation.",
+        "role": "Team Lead"
+      },
+      "gallery": [
+        {
+          "src": "/images/projects/insightex.png",
+          "type": "hero",
+          "title": "Tracking View",
+          "description": "Real-time customer tracking and heatmap overlay."
+        }
+      ],
+      "features": [],
+      "technicalDecisions": [],
+      "architecture": null,
+      "challenges": [],
+      "metrics": [],
+      "learnings": [],
+      "future": []
     }
   ],
   "certifications": [
@@ -100,25 +389,25 @@
       "title": "Oracle Cloud Infrastructure 2025 Data Science Professional",
       "issuer": "Oracle",
       "year": "2025",
-      "link": "#"
+      "link": null
     },
     {
       "title": "Google Cloud Data Analytics",
       "issuer": "Google Cloud Skills Boost",
       "year": "2024",
-      "link": "#"
+      "link": null
     },
     {
       "title": "Android 14 & Kotlin Development Masterclass",
       "issuer": "Udemy",
       "year": "2024",
-      "link": "#"
+      "link": null
     },
     {
       "title": "Java Programming Fundamentals",
       "issuer": "Infosys Springboard",
       "year": "2023",
-      "link": "#"
+      "link": null
     }
   ]
 }
