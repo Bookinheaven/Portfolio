@@ -150,11 +150,11 @@
       "skills": [
         "react",
         "express",
-        "mongodb",
+        "postgresql",
         "jwt",
         "fastapi"
       ],
-      "heroImage": "/images/projects/athena/dashboard-1.png",
+      "heroImage": "/images/projects/athena/home.png",
       "links": {
         "github": "https://github.com/Bookinheaven/Athena",
         "live": null,
@@ -167,40 +167,70 @@
       },
       "gallery": [
         {
-          "src": "/images/projects/athena/dashboard-1.png",
+          "src": "/images/projects/athena/home.png",
           "type": "hero",
-          "title": "Dashboard",
-          "description": "Visualizes productivity trends and focus-session data."
+          "title": "Dashboard & Daily Focus",
+          "description": "Visualizes daily target progress, adaptive streak metrics, behavioral insights, and prioritized next actions."
         },
         {
-          "src": "/images/projects/athena/dashboard-2.png",
-          "type": "hero1",
-          "title": "Dashboard2",
-          "description": "Visualizes productivity trends and focus-session data."
-        },
-        {
-          "src": "/images/projects/athena/quick-session.png",
-          "type": "hero2",
-          "title": "Quick Session",
-          "description": "Focus session with timer"
-        },
-        {
-          "src": "/images/projects/athena/profile.png",
-          "type": "hero3",
-          "title": "Profile",
-          "description": "Profile"
-        },
-        {
-          "src": "/images/projects/athena/themes.png",
-          "type": "hero4",
-          "title": "Themes Settings",
-          "description": "Themes settings"
+          "src": "/images/projects/athena/timer.png",
+          "type": "feature",
+          "title": "Deep Focus Timer",
+          "description": "Distraction-free Pomodoro session timer with circular progress tracking, contextual pause tracking, and Zen mode."
         },
         {
           "src": "/images/projects/athena/planner.png",
-          "type": "hero5",
-          "title": "Planner",
-          "description": "Planner"
+          "type": "feature",
+          "title": "Daily Planner",
+          "description": "Agenda view connecting planned tasks directly to focus sessions with an active task inventory sidebar."
+        },
+        {
+          "src": "/images/projects/athena/planner-1.png",
+          "type": "feature",
+          "title": "Task Inventory & Inspector",
+          "description": "Comprehensive task manager with priority filters, scheduling status, and detailed task inspector drawer."
+        },
+        {
+          "src": "/images/projects/athena/planner-2.png",
+          "type": "feature",
+          "title": "Goal Tracking & Milestones",
+          "description": "Long-term objective tracker visualizing milestone completion progress and associated sub-tasks."
+        },
+        {
+          "src": "/images/projects/athena/planner-3.png",
+          "type": "feature",
+          "title": "Planning Notes & Markdown Editor",
+          "description": "Integrated rich-text and markdown editor supporting syntax code blocks and study scratchpads alongside tasks."
+        },
+        {
+          "src": "/images/projects/athena/planner-4.png",
+          "type": "feature",
+          "title": "Timeline & Time-Blocking",
+          "description": "Visual day calendar for time-blocking work segments, featuring drag-and-drop task queue and workload advisories."
+        },
+        {
+          "src": "/images/projects/athena/history.png",
+          "type": "feature",
+          "title": "Work Journal & Session History",
+          "description": "Historical work journal with calendar day navigation, planned task records, and logged focus session metrics."
+        },
+        {
+          "src": "/images/projects/athena/themes.png",
+          "type": "feature",
+          "title": "Theme Customization",
+          "description": "Custom workspace styling with a suite of curated themes including high-contrast dark modes and vibrant color schemes."
+        },
+        {
+          "src": "/images/projects/athena/settings.png",
+          "type": "feature",
+          "title": "Session & Workflow Settings",
+          "description": "Granular configuration for daily focus targets, Pomodoro break intervals, and automated workflow triggers."
+        },
+        {
+          "src": "/images/projects/athena/profile.png",
+          "type": "feature",
+          "title": "Profile & Security Management",
+          "description": "User profile dashboard managing account credentials, activity timestamps, session security, and password authentication."
         }
       ],
       "features": [
@@ -219,9 +249,9 @@
       ],
       "technicalDecisions": [
         {
-          "decision": "Using MongoDB for behavioral analytics",
-          "technology": "MongoDB",
-          "reasoning": "Flexible schema allows for storing varied daily tracking data points without rigid migrations."
+          "decision": "Migrating to PostgreSQL for relational consistency",
+          "technology": "PostgreSQL",
+          "reasoning": "Provides strict schema enforcement, relational integrity, and ACID guarantees for session telemetry, task hierarchies, and streak tracking."
         }
       ],
       "architecture": null,

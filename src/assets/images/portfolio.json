@@ -48,8 +48,8 @@
   "projects": [
     {
       "title": "Athena",
-      "category": "React, Express.js, MongoDB, JWT, FastAPI",
-      "image": "/images/projects/athena.png",
+      "category": "React, Express.js, PostgreSQL, JWT, FastAPI",
+      "image": "/images/projects/athena/home.png",
       "startDate": "2026",
       "endDate": "Present",
       "link": "https://github.com/Bookinheaven",
