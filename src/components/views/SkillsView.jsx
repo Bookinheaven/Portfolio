@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import data from '../../data/portfolio.json';
 import SkillRadar from './SkillRadar';
+import { Badge } from '@/components/ui/badge';
 
 const SkillsView = ({ id, onOpenProject }) => {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -11,6 +12,16 @@ const SkillsView = ({ id, onOpenProject }) => {
   const categories = useMemo(() => {
     const cats = new Set(data.skills.map(s => s.category));
     return ['All', ...Array.from(cats)];
+  }, []);
+
+  // Derive actual project usage count for each skill
+  const skillProjectMap = useMemo(() => {
+    const map = {};
+    data.skills.forEach(skill => {
+      const count = data.projects.filter(p => p.skills?.includes(skill.id)).length;
+      map[skill.id] = count;
+    });
+    return map;
   }, []);
 
   const filteredSkills = useMemo(() => {
@@ -38,7 +49,7 @@ const SkillsView = ({ id, onOpenProject }) => {
           <div className="mb-8">
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Skill Graph</h2>
             <p className="text-vercel-accents-5 text-sm">
-              Explore the technologies I use and the projects where I've applied them.
+              Explore the technologies I use and the actual projects where I've applied them.
             </p>
           </div>
 
@@ -56,35 +67,47 @@ const SkillsView = ({ id, onOpenProject }) => {
             ))}
           </div>
 
-          <motion.div layout className="flex flex-wrap gap-3 overflow-y-auto max-h-[50vh] pr-4 custom-scrollbar content-start">
+          <motion.div layout className="flex flex-wrap gap-2.5 overflow-y-auto max-h-[50vh] pr-4 custom-scrollbar content-start">
             <AnimatePresence mode="popLayout">
-              {filteredSkills.map(skill => (
-                <motion.button
-                  layout
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.2, layout: { type: "spring", bounce: 0.2, duration: 0.6 } }}
-                  key={skill.id}
-                  onClick={() => {
-                    setActiveSkills(prev => {
-                      const isSelected = prev.some(s => s.id === skill.id);
-                      if (isSelected) {
-                        // Prevent deselecting the last skill to avoid empty state if preferred, but allow it for now
-                        return prev.filter(s => s.id !== skill.id);
-                      }
-                      return [...prev, skill];
-                    });
-                  }}
-                  className={`px-4 py-2 rounded-lg border text-sm font-medium transition-colors duration-300 ${
-                    activeSkills.some(s => s.id === skill.id) 
-                      ? 'border-white bg-white/10 text-white shadow-[0_0_15px_rgba(255,255,255,0.1)]' 
-                      : 'border-white/10 bg-black text-vercel-accents-4 hover:border-white/30 hover:text-white hover:bg-white/5'
-                  }`}
-                >
-                  {skill.name}
-                </motion.button>
-              ))}
+              {filteredSkills.map(skill => {
+                const pCount = skillProjectMap[skill.id] || 0;
+                const isSelected = activeSkills.some(s => s.id === skill.id);
+                return (
+                  <motion.button
+                    layout
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
+                    transition={{ duration: 0.2, layout: { type: "spring", bounce: 0.2, duration: 0.6 } }}
+                    key={skill.id}
+                    onClick={() => {
+                      setActiveSkills(prev => {
+                        const exists = prev.some(s => s.id === skill.id);
+                        if (exists) {
+                          return prev.filter(s => s.id !== skill.id);
+                        }
+                        return [...prev, skill];
+                      });
+                    }}
+                    className={`px-3.5 py-2 rounded-lg border text-sm font-medium transition-colors duration-300 flex items-center justify-between gap-2 ${
+                      isSelected 
+                        ? 'border-white bg-white/10 text-white shadow-[0_0_15px_rgba(255,255,255,0.1)]' 
+                        : 'border-white/10 bg-black text-vercel-accents-4 hover:border-white/30 hover:text-white hover:bg-white/5'
+                    }`}
+                  >
+                    <span>{skill.name}</span>
+                    {pCount > 0 && (
+                      <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded transition-colors ${
+                        isSelected
+                          ? 'bg-white text-black font-semibold'
+                          : 'bg-white/10 text-vercel-accents-5'
+                      }`}>
+                        {pCount}
+                      </span>
+                    )}
+                  </motion.button>
+                );
+              })}
             </AnimatePresence>
           </motion.div>
         </div>
@@ -108,9 +131,9 @@ const SkillsView = ({ id, onOpenProject }) => {
                   {activeSkills.map(skill => (
                     <div key={skill.id} className={`flex items-center ${activeSkills.length === 1 ? 'gap-3' : 'gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-xl'}`}>
                       <h3 className={`${activeSkills.length === 1 ? 'text-4xl' : 'text-xl'} font-bold leading-none`}>{skill.name}</h3>
-                      <span className={`font-mono bg-white/10 rounded text-vercel-accents-5 uppercase ${activeSkills.length === 1 ? 'text-xs px-2 py-1' : 'text-[10px] px-2 py-0.5'}`}>
+                      <Badge variant="outline" className={`font-mono bg-white/10 text-vercel-accents-5 uppercase border-white/10 ${activeSkills.length === 1 ? 'text-xs px-2 py-0.5' : 'text-[10px] px-1.5 py-0.2'}`}>
                         {skill.category}
-                      </span>
+                      </Badge>
                     </div>
                   ))}
                 </div>
@@ -118,34 +141,43 @@ const SkillsView = ({ id, onOpenProject }) => {
                 <div className="w-12 h-1 bg-white/20 mb-8 mt-4 rounded-full" />
 
                 <div className="mb-8">
-                  <h4 className="text-lg font-medium mb-4 text-white/80">Projects Demonstrated In</h4>
                   {(() => {
                     const derivedProjects = data.projects.filter(p => 
                       p.skills?.some(skillId => activeSkills.some(active => active.id === skillId))
                     );
                     
-                    return derivedProjects.length > 0 ? (
-                      <div className="flex flex-col gap-3">
-                        {derivedProjects.map(project => (
-                          <div key={project.id} className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-lg bg-white/5 border border-white/5 hover:border-white/20 transition-colors cursor-pointer group"
-                               onClick={() => onOpenProject(project)}>
-                            <div className="mb-2 sm:mb-0">
-                              <h5 className="font-bold group-hover:text-white transition-colors">{project.title}</h5>
-                              <p className="text-xs text-vercel-accents-5">{project.subtitle}</p>
-                            </div>
-                            <div className="flex flex-col sm:items-end">
-                              <div className="text-xs text-vercel-accents-5 mb-1 max-w-[200px] text-left sm:text-right truncate">
-                                {project.skills.filter(s => activeSkills.some(as => as.id === s)).map(s => data.skills.find(ds => ds.id === s)?.name).join(', ')}
+                    return (
+                      <div>
+                        <div className="flex items-center justify-between mb-4">
+                          <h4 className="text-lg font-medium text-white/80">Projects Demonstrated In</h4>
+                          <Badge variant="secondary" className="font-mono bg-white/10 text-vercel-accents-4 px-2.5 py-0.5">
+                            {derivedProjects.length} {derivedProjects.length === 1 ? 'Project' : 'Projects'}
+                          </Badge>
+                        </div>
+                        {derivedProjects.length > 0 ? (
+                          <div className="flex flex-col gap-3">
+                            {derivedProjects.map(project => (
+                              <div key={project.id} className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-lg bg-white/5 border border-white/5 hover:border-white/20 transition-colors cursor-pointer group"
+                                   onClick={() => onOpenProject(project)}>
+                                <div className="mb-2 sm:mb-0">
+                                  <h5 className="font-bold group-hover:text-white transition-colors">{project.title}</h5>
+                                  <p className="text-xs text-vercel-accents-5">{project.subtitle}</p>
+                                </div>
+                                <div className="flex flex-col sm:items-end">
+                                  <div className="text-xs text-vercel-accents-5 mb-1 max-w-[200px] text-left sm:text-right truncate">
+                                    {project.skills.filter(s => activeSkills.some(as => as.id === s)).map(s => data.skills.find(ds => ds.id === s)?.name).join(', ')}
+                                  </div>
+                                  <div className="text-xs font-medium text-vercel-accents-6 group-hover:text-white transition-colors">
+                                    View Project →
+                                  </div>
+                                </div>
                               </div>
-                              <div className="text-xs font-medium text-vercel-accents-6 group-hover:text-white transition-colors">
-                                View Project →
-                              </div>
-                            </div>
+                            ))}
                           </div>
-                        ))}
+                        ) : (
+                          <p className="text-sm text-vercel-accents-5 italic">No specific projects linked yet, but used in general development.</p>
+                        )}
                       </div>
-                    ) : (
-                      <p className="text-sm text-vercel-accents-5 italic">No specific projects linked yet, but used in general development.</p>
                     );
                   })()}
                 </div>
@@ -158,12 +190,17 @@ const SkillsView = ({ id, onOpenProject }) => {
                 exit={{ opacity: 0 }}
                 className="flex flex-col items-center justify-center h-full relative z-10"
               >
-                <div className="mb-4 w-full">
-                  <SkillRadar skills={data.skills} />
+                <div className="w-full">
+                  <SkillRadar 
+                    skills={data.skills} 
+                    projects={data.projects} 
+                    activeCategory={activeCategory}
+                    onSelectCategory={(cat) => {
+                      setActiveCategory(cat);
+                      setActiveSkills([]);
+                    }}
+                  />
                 </div>
-                <p className="text-vercel-accents-5 text-sm text-center">
-                  Select a skill from the graph to explore related case studies.
-                </p>
               </motion.div>
             )}
           </AnimatePresence>

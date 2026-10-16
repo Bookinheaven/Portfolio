@@ -2,6 +2,8 @@ import { useRef, useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiX, FiGithub, FiExternalLink, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import data from '../../data/portfolio.json';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 
 const ProjectCaseStudy = ({ project, onClose }) => {
   const overlayRef = useRef(null);
@@ -32,12 +34,14 @@ const ProjectCaseStudy = ({ project, onClose }) => {
       className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl overflow-y-auto"
     >
       <div className="min-h-screen w-full max-w-5xl mx-auto px-6 py-12 md:py-24 relative">
-        <button 
+        <Button 
+          variant="ghost"
+          size="icon"
           onClick={onClose}
-          className="fixed top-8 right-8 p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors z-50 text-white"
+          className="fixed top-8 right-8 rounded-full bg-white/10 hover:bg-white/20 transition-colors z-50 text-white"
         >
-          <FiX className="w-6 h-6" />
-        </button>
+          <FiX className="w-5 h-5" />
+        </Button>
 
         {/* Hero Section */}
         <div className="mb-20">
@@ -54,10 +58,11 @@ const ProjectCaseStudy = ({ project, onClose }) => {
               {project.links && Object.entries(project.links).map(([type, url]) => {
                 if (!url) return null;
                 return (
-                  <a key={type} href={url} target="_blank" rel="noopener noreferrer" 
-                     className="flex items-center gap-2 px-4 py-2 rounded-md bg-white/10 hover:bg-white/20 transition-colors text-sm font-medium capitalize">
-                    {type === 'github' ? <FiGithub /> : <FiExternalLink />}
-                    {type === 'github' ? 'View Source' : `Visit ${type}`}
+                  <a key={type} href={url} target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="sm" className="gap-2 border-white/20 bg-white/5 hover:bg-white/15 text-white capitalize">
+                      {type === 'github' ? <FiGithub /> : <FiExternalLink />}
+                      {type === 'github' ? 'View Source' : `Visit ${type}`}
+                    </Button>
                   </a>
                 );
               })}
@@ -152,9 +157,9 @@ const ProjectCaseStudy = ({ project, onClose }) => {
                 {project.skills?.map(skillId => {
                   const skill = data.skills.find(s => s.id === skillId);
                   return skill ? (
-                    <span key={skillId} className="text-xs px-2 py-1 bg-white/5 border border-white/10 rounded text-vercel-accents-3">
+                    <Badge key={skillId} variant="outline" className="border-white/10 bg-white/5 text-vercel-accents-3 px-2 py-0.5 text-xs">
                       {skill.name}
-                    </span>
+                    </Badge>
                   ) : null;
                 })}
               </div>
