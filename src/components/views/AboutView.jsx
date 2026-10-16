@@ -5,7 +5,7 @@ const AboutView = ({ id }) => {
   const { about } = data;
 
   const timelineData = [
-    { year: '2026', description: 'Athena, AI-Powered Productivity', active: true },
+    { year: '2026', description: 'Athena & Commit (AI Tools & Systems)', active: true },
     { year: '2025', description: 'Deepening Backend & AI/ML', active: false },
     { year: '2024', description: 'ResQit, AquaTrack, InsightEX', active: false }
   ];

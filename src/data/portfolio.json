@@ -129,6 +129,16 @@
       "id": "tailwindcss",
       "name": "Tailwind CSS",
       "category": "Frontend"
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "category": "Tools"
+    },
+    {
+      "id": "ollama",
+      "name": "Ollama",
+      "category": "AI / ML"
     }
   ],
   "projects": [
@@ -261,12 +271,99 @@
       "future": []
     },
     {
+      "id": "commit",
+      "title": "Commit",
+      "subtitle": "AI Git commit generator powered by local LLM via Ollama",
+      "status": "Completed",
+      "featured": true,
+      "order": 2,
+      "period": {
+        "start": "2026",
+        "end": "2026"
+      },
+      "tags": [
+        "CLI Tool",
+        "AI / LLM",
+        "Developer Tools"
+      ],
+      "skills": [
+        "python",
+        "git",
+        "ollama"
+      ],
+      "heroImage": "/images/projects/commit/hero.png",
+      "links": {
+        "github": "https://github.com/Bookinheaven/Commit",
+        "live": null,
+        "demo": null
+      },
+      "overview": {
+        "problem": "Crafting clean, descriptive, and standardized Conventional Commit messages for complex or multi-file staged diffs is tedious, and sending proprietary source code to external cloud AI APIs poses serious privacy risks.",
+        "solution": "A lightweight, zero-dependency local CLI tool that inspects staged Git changes and prompts a locally running LLM through Ollama (e.g. qwen2.5-coder:7b) to generate structured Conventional Commits, featuring Map-Reduce synthesis for massive diffs and full interactive controls.",
+        "role": "Creator & Core Developer"
+      },
+      "gallery": [
+        {
+          "src": "/images/projects/commit/hero.png",
+          "type": "hero",
+          "title": "Interactive CLI & Conventional Commit Generation",
+          "description": "Pre-flight Ollama health check, staged file listing, live streaming spinner, and interactive [Y/E/R/N] commit menu."
+        },
+        {
+          "src": "/images/projects/commit/commit.png",
+          "type": "feature",
+          "title": "Map-Reduce Engine for Large Diffs",
+          "description": "Intelligent multi-stage pipeline: auto-filtering lockfiles, preserving file boundaries across chunks, parallel per-chunk summarization, and final synthesis."
+        }
+      ],
+      "features": [
+        {
+          "name": "Local LLM Execution via Ollama",
+          "description": "Runs entirely on your machine with models like qwen2.5-coder:7b. No external APIs, no internet required, ensuring complete code confidentiality."
+        },
+        {
+          "name": "Interactive Commit Flow",
+          "description": "Prompt menu allows one-key actions: Accept & commit (Y), open in external editor like Notepad/$EDITOR/nano (E), regenerate (R), or cancel (N)."
+        },
+        {
+          "name": "Map-Reduce for Large Diffs",
+          "description": "Automatically filters lockfiles and generated assets, splits huge staged diffs without breaking files apart, generates per-chunk summaries, and synthesizes one coherent message."
+        },
+        {
+          "name": "Commit History Logger & Zero-Dependency Setup",
+          "description": "Appends every successful commit with timestamp and repo path to commit_history.json. Built with pure Python standard library for zero pip installation overhead."
+        }
+      ],
+      "technicalDecisions": [
+        {
+          "decision": "Zero-Cloud Local Inference Architecture",
+          "technology": "Ollama REST API",
+          "reasoning": "Eliminates privacy concerns by keeping sensitive diffs and proprietary source code strictly on the local developer machine."
+        },
+        {
+          "decision": "Hierarchical Map-Reduce Diff Chunking",
+          "technology": "Custom Python Diff Parser",
+          "reasoning": "Diffs exceeding 20,000 characters trigger automatic filtering of lockfiles, file-boundary preservation, and two-tier summarization to prevent LLM context overflows and hallucinations."
+        },
+        {
+          "decision": "Pure Standard-Library Implementation",
+          "technology": "Python 3.8+ (urllib, subprocess, json, os)",
+          "reasoning": "Removes all third-party package dependencies and virtual environment requirements, enabling instant global PATH execution across Windows, Linux, and macOS."
+        }
+      ],
+      "architecture": null,
+      "challenges": [],
+      "metrics": [],
+      "learnings": [],
+      "future": []
+    },
+    {
       "id": "resqit",
       "title": "ResQit",
       "subtitle": "Disaster-response coordination system",
       "status": "Completed",
       "featured": true,
-      "order": 2,
+      "order": 3,
       "period": {
         "start": "2024",
         "end": "2024"
@@ -326,7 +423,7 @@
       "subtitle": "Desktop hydration-tracking application",
       "status": "Completed",
       "featured": false,
-      "order": 3,
+      "order": 4,
       "period": {
         "start": "2024",
         "end": "2024"
@@ -371,7 +468,7 @@
       "subtitle": "Computer vision retail analytics system",
       "status": "Completed",
       "featured": true,
-      "order": 4,
+      "order": 5,
       "period": {
         "start": "2024",
         "end": "2024"

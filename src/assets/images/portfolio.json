@@ -43,7 +43,8 @@
     "Java Swing",
     "Git",
     "Linux",
-    "Docker"
+    "Docker",
+    "Ollama"
   ],
   "projects": [
     {
@@ -56,6 +57,18 @@
       "description": [
         "Building a full-stack productivity platform combining focus sessions, a task planner, adaptive streak tracking, and behavioral analytics.",
         "Implemented secure authentication with JWT and OTP verification, and designed interactive dashboards to visualize productivity trends over time."
+      ]
+    },
+    {
+      "title": "Commit",
+      "category": "Python, Git, Ollama, Local LLM",
+      "image": "/images/projects/commit/hero.png",
+      "startDate": "2026",
+      "endDate": "2026",
+      "link": "https://github.com/Bookinheaven/Commit",
+      "description": [
+        "Built a local AI Git commit generator that writes structured Conventional Commit messages from staged diffs using Ollama.",
+        "Engineered an automated Map-Reduce diff processor for large multi-file changes with zero third-party dependencies and complete privacy."
       ]
     },
     {
