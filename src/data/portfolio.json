@@ -465,7 +465,7 @@
     {
       "id": "insightex",
       "title": "InsightEX",
-      "subtitle": "Computer vision retail analytics system",
+      "subtitle": "Real-time AI retail analytics engine with pose tracking, heatmaps, and privacy anonymization",
       "status": "Completed",
       "featured": true,
       "order": 5,
@@ -475,7 +475,8 @@
       },
       "tags": [
         "Computer Vision",
-        "Analytics"
+        "Retail Analytics",
+        "Deep Learning"
       ],
       "skills": [
         "python",
@@ -483,27 +484,87 @@
         "deepsort",
         "openvino"
       ],
-      "heroImage": "/images/projects/insightex.png",
+      "heroImage": "/images/projects/insightex/hero.png",
       "links": {
         "github": "https://github.com/Bookinheaven/InsightEX",
         "live": null,
         "demo": null
       },
       "overview": {
-        "problem": "Retailers needed real-time insights into customer movement and store hotspots.",
-        "solution": "A computer vision pipeline utilizing YOLOv8 and DeepSORT for customer tracking and heatmap generation.",
-        "role": "Team Lead"
+        "problem": "Retailers lack real-time visibility into customer foot traffic, dwell bottlenecks, and staff assistance needs, while standard CCTV surveillance poses serious customer privacy risks and fails under real-world occlusions.",
+        "solution": "An end-to-end computer vision retail intelligence engine combining YOLOv8 pose estimation, DeepSORT tracking, 2D Gaussian foot-traffic heatmaps with temporal decay, GDPR face anonymization, and a multi-client live web dashboard.",
+        "role": "Creator & Lead Developer"
       },
       "gallery": [
         {
-          "src": "/images/projects/insightex.png",
+          "src": "/images/projects/insightex/hero.png",
           "type": "hero",
-          "title": "Tracking View",
-          "description": "Real-time customer tracking and heatmap overlay."
+          "title": "Real-Time Tracking & Heatmap Dashboard",
+          "description": "Multi-person pose tracking, 2D Gaussian foot-traffic heatmap accumulation, dwell-time analytics, and exclusion zone boundary monitoring."
+        },
+        {
+          "src": "/images/projects/insightex/out1.png",
+          "type": "feature",
+          "title": "Store Floor Traffic & Density Mapping",
+          "description": "Perspective-accurate 2D Gaussian density splatting tracking foot-traffic hotspots and customer paths across the retail floor."
+        },
+        {
+          "src": "/images/projects/insightex/out2.png",
+          "type": "feature",
+          "title": "Dwell-Time Monitoring & Bottleneck Detection",
+          "description": "Automated dwell-time threshold tracking identifying shopper interest zones and high-congestion retail sections."
+        },
+        {
+          "src": "/images/projects/insightex/out3.png",
+          "type": "feature",
+          "title": "Exclusion Zone Perimeter Monitoring",
+          "description": "Custom polygon boundary surveillance triggering instant alerts for restricted staff-only or high-security areas."
         }
       ],
-      "features": [],
-      "technicalDecisions": [],
+      "features": [
+        {
+          "name": "Real-Time Person Tracking & Dwell Alerts",
+          "description": "DeepSORT tracking with an occlusion grace period (TRACK_LOST_GRACE_SECONDS = 3.0s) prevents dwell timer resets during temporary camera occlusions, triggering automated alerts when customer dwell thresholds are exceeded."
+        },
+        {
+          "name": "Perspective-Accurate 2D Gaussian Heatmaps",
+          "description": "Ground-contact footprint splatting with exponential temporal decay (lambda = 0.995) eliminates perspective scale bias and floor saturation, providing true spatial hotspot visualization without blue colormap artifacts."
+        },
+        {
+          "name": "GDPR & CCTV Privacy Face Anonymization",
+          "description": "Automated facial blurring guided by 5 facial keypoints with upper-body fallback ensures complete customer privacy compliance without compromising downstream tracking or analytics."
+        },
+        {
+          "name": "Glassmorphism Live Web Dashboard",
+          "description": "Multi-threaded HTTP streaming server delivering 30 FPS MJPEG video, real-time KPI counters, active dwell alerts feed, and interactive in-browser exclusion zone polygon drawing."
+        },
+        {
+          "name": "Hardware-Adaptive Inference Pipeline",
+          "description": "Intelligent execution routing supporting NVIDIA CUDA GPU acceleration with automatic fallback to Intel OpenVINO IR and native PyTorch CPU."
+        }
+      ],
+      "technicalDecisions": [
+        {
+          "decision": "Ground-Contact Footprint Splatting over Bounding Box Fill",
+          "technology": "2D Gaussian Kernel (OpenCV & NumPy)",
+          "reasoning": "Splats density exclusively at the person's floor-contact coordinates rather than painting entire bounding boxes, eliminating perspective scale distortion between foreground and background camera planes."
+        },
+        {
+          "decision": "Occlusion-Tolerant Tracker State Lifecycle",
+          "technology": "DeepSORT & Temporal State Caching",
+          "reasoning": "Decoupled track deletion from frame-level detector misses with a 3.0s grace window and clean appearance embeddings, eliminating flickering IDs and false dwell resets in crowded retail environments."
+        },
+        {
+          "decision": "Isolated Clean Frame Ingestion for ReID",
+          "technology": "OpenCV Memory Pipeline",
+          "reasoning": "Maintains an untouched frame copy strictly for deep appearance feature extraction so that UI overlays, bounding boxes, and skeleton lines never corrupt tracker re-identification accuracy."
+        },
+        {
+          "decision": "Zero-Dependency Multi-Threaded Web Server",
+          "technology": "Python ThreadingHTTPServer & Server-Sent Streams",
+          "reasoning": "Avoids heavyweight web framework dependencies and event-loop threading conflicts with PyTorch/OpenCV, delivering ultra-low-latency MJPEG feeds and JSON telemetry to web clients."
+        }
+      ],
       "architecture": null,
       "challenges": [],
       "metrics": [],

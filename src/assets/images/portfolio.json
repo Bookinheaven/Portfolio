@@ -97,13 +97,14 @@
     },
     {
       "title": "InsightEX",
-      "category": "Python, YOLOv8, DeepSORT, OpenVINO",
-      "image": "/images/projects/insightex.png",
+      "category": "Python, YOLOv8, DeepSORT, OpenVINO, CUDA",
+      "image": "/images/projects/insightex/hero.png",
       "startDate": "2024",
       "endDate": "2024",
-      "link": "https://github.com/Bookinheaven",
+      "link": "https://github.com/Bookinheaven/InsightEX",
       "description": [
-        "Led a team in developing an AI-powered retail analytics system for customer tracking, heatmap generation, and real-time insights."
+        "Engineered an AI-powered retail analytics engine with YOLOv8 pose tracking, DeepSORT re-identification, and real-time dwell-time alerts.",
+        "Implemented 2D Gaussian foot-traffic heatmaps with temporal decay, GDPR face anonymization, and a multi-threaded glassmorphism web dashboard."
       ]
     }
   ],
