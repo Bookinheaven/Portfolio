@@ -9,7 +9,7 @@ import SkillsView from './components/views/SkillsView';
 import AboutView from './components/views/AboutView';
 import CertificationsView from './components/views/CertificationsView';
 import ProjectCaseStudy from './components/project/ProjectCaseStudy';
-import { trackEvent } from './lib/tracker';
+import { syncSession } from './lib/session';
 
 const SECTIONS = [
   { id: 'home', name: 'Home' },
@@ -23,18 +23,17 @@ function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeProject, setActiveProject] = useState(null);
 
-  // Track initial visit
+  // Sync initial session on mount
   useEffect(() => {
-    trackEvent({ section: 'home' });
+    syncSession({ section: 'home' });
   }, []);
 
-  // Track active project modal opens
+  // Sync project interactions
   useEffect(() => {
     if (activeProject) {
-      trackEvent({
+      syncSession({
         section: 'projects',
-        project: activeProject.title,
-        forceNotification: true
+        project: activeProject.title
       });
     }
   }, [activeProject]);
@@ -47,7 +46,7 @@ function App() {
             const index = SECTIONS.findIndex((s) => s.id === entry.target.id);
             if (index !== -1) {
               setActiveIndex(index);
-              trackEvent({ section: SECTIONS[index].id });
+              syncSession({ section: SECTIONS[index].id });
             }
           }
         });
