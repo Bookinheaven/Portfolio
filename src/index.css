@@ -46,6 +46,11 @@
   * {
     @apply border-border outline-ring/50;
   }
+  
+  button, nav, [role="button"], .vercel-card, svg {
+    user-select: none;
+    -webkit-user-select: none;
+  }
 }
 
 /* Custom Scrollbar */

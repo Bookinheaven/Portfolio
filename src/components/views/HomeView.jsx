@@ -1,6 +1,6 @@
 import data from '../../data/portfolio.json';
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiMail, FiTwitter } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail, FiTwitter, FiMove } from 'react-icons/fi';
 import { SiLeetcode } from 'react-icons/si';
 
 const HomeView = ({ id, onOpenProject }) => {
@@ -39,7 +39,7 @@ const HomeView = ({ id, onOpenProject }) => {
               {personal.tagline}
             </p>
             
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-6 mb-8">
               <button className="edge-glow-solid px-8 py-4 font-medium cursor-pointer rounded-lg text-lg" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
                 View Work
               </button>
@@ -50,6 +50,11 @@ const HomeView = ({ id, onOpenProject }) => {
                   </a>
                 ))}
               </div>
+            </div>
+
+            <div className="inline-flex items-center gap-2 text-xs font-mono text-vercel-accents-5 bg-white/5 border border-white/10 px-3.5 py-2 rounded-full backdrop-blur-md">
+              <FiMove className="w-3.5 h-3.5 text-cyan-400" />
+              <span>Scroll, drag, or use arrow keys (← / →) to explore</span>
             </div>
           </motion.div>
 
@@ -70,7 +75,13 @@ const HomeView = ({ id, onOpenProject }) => {
                 >
                   <div className="aspect-[4/3] rounded-xl overflow-hidden relative bg-black">
                     {project.heroImage && (
-                      <img src={project.heroImage} alt={project.title} className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
+                      <img
+                        src={project.heroImage}
+                        alt={project.title}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 pointer-events-none"
+                      />
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80" />
                     <div className="absolute bottom-4 left-4 right-4">
@@ -89,12 +100,18 @@ const HomeView = ({ id, onOpenProject }) => {
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 + (idx * 0.1), duration: 0.5 }}
-                  className="vercel-card p-2 rounded-2xl group cursor-pointer overflow-hidden border border-white/5 hover:border-white/20"
+                  className="vercel-card p-2 rounded-2xl group cursor-pointer overflow-hidden border border-white/5 hover:border-white/20 select-none"
                   onClick={() => onOpenProject(project)}
                 >
                   <div className="aspect-[4/3] rounded-xl overflow-hidden relative bg-black">
                     {project.heroImage && (
-                      <img src={project.heroImage} alt={project.title} className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
+                      <img
+                        src={project.heroImage}
+                        alt={project.title}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 pointer-events-none"
+                      />
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80" />
                     <div className="absolute bottom-4 left-4 right-4">

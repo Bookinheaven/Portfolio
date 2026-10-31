@@ -60,6 +60,18 @@
       ]
     },
     {
+      "title": "Support",
+      "category": "Python, PostgreSQL, MongoDB, SQLGlot, Ollama, Typer",
+      "image": "/images/projects/support/hero.png",
+      "startDate": "2026",
+      "endDate": "Present",
+      "link": "https://github.com/Bookinheaven/Support",
+      "description": [
+        "Architected an AI-powered terminal workspace connecting to PostgreSQL, MySQL, SQLite, MSSQL, and MongoDB for natural language SQL exploration.",
+        "Engineered SQLGlot AST safety validation, semantic schema pruning, proactive clarification dialogue, and OS-native keyring credential encryption."
+      ]
+    },
+    {
       "title": "Commit",
       "category": "Python, Git, Ollama, Local LLM",
       "image": "/images/projects/commit/hero.png",

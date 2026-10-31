@@ -13,16 +13,26 @@ const ProjectCaseStudy = ({ project, onClose }) => {
     ? project.gallery 
     : (project.heroImage ? [{ src: project.heroImage, title: 'Hero' }] : []);
 
-  // Stop native wheel events from bubbling up to the horizontal scroll container
+  // Stop native wheel events from bubbling up & listen for Escape key
   useEffect(() => {
     const el = overlayRef.current;
     if (!el) return;
     const handleWheel = (e) => {
       e.stopPropagation();
     };
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
     el.addEventListener('wheel', handleWheel, { passive: false });
-    return () => el.removeEventListener('wheel', handleWheel);
-  }, []);
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      el.removeEventListener('wheel', handleWheel);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [onClose]);
 
   return (
     <motion.div
@@ -34,14 +44,20 @@ const ProjectCaseStudy = ({ project, onClose }) => {
       className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl overflow-y-auto"
     >
       <div className="min-h-screen w-full max-w-5xl mx-auto px-6 py-12 md:py-24 relative">
-        <Button 
-          variant="ghost"
-          size="icon"
-          onClick={onClose}
-          className="fixed top-8 right-8 rounded-full bg-white/10 hover:bg-white/20 transition-colors z-50 text-white"
-        >
-          <FiX className="w-5 h-5" />
-        </Button>
+        <div className="fixed top-8 right-8 z-50 flex items-center gap-2 select-none">
+          <span className="hidden sm:inline-block text-[11px] font-mono text-white/50 bg-black/60 backdrop-blur-md px-2 py-1 rounded-md border border-white/10">
+            ESC
+          </span>
+          <Button 
+            variant="ghost"
+            size="icon"
+            onClick={onClose}
+            aria-label="Close case study"
+            className="rounded-full bg-white/10 hover:bg-white/20 transition-colors text-white cursor-pointer"
+          >
+            <FiX className="w-5 h-5" />
+          </Button>
+        </div>
 
         {/* Hero Section */}
         <div className="mb-20">
@@ -81,6 +97,8 @@ const ProjectCaseStudy = ({ project, onClose }) => {
                   key={currentImageIndex}
                   src={images[currentImageIndex].src} 
                   alt={images[currentImageIndex].title || project.title} 
+                  loading="lazy"
+                  decoding="async"
                   initial={{ opacity: 0, filter: 'blur(10px)' }}
                   animate={{ opacity: 1, filter: 'blur(0px)' }}
                   exit={{ opacity: 0, filter: 'blur(10px)' }}

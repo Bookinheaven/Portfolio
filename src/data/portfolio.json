@@ -271,12 +271,122 @@
       "future": []
     },
     {
+      "id": "support",
+      "title": "Support",
+      "subtitle": "AI-powered multi-database terminal workspace & natural language SQL engine",
+      "status": "Completed",
+      "featured": true,
+      "order": 2,
+      "period": {
+        "start": "2026",
+        "end": "Present"
+      },
+      "tags": [
+        "CLI Tool",
+        "AI / LLM",
+        "Database",
+        "Developer Tools"
+      ],
+      "skills": [
+        "python",
+        "postgresql",
+        "mongodb",
+        "ollama",
+        "git"
+      ],
+      "heroImage": "/images/projects/support/hero.png",
+      "links": {
+        "github": "https://github.com/Bookinheaven/Support",
+        "live": null,
+        "demo": null
+      },
+      "overview": {
+        "problem": "Engineers and data teams struggle to query complex schemas across heterogeneous databases without writing repetitive SQL joins, while naive cloud Text-to-SQL tools hallucinate queries, risk unauthorized mutations, and leak sensitive schemas to third-party APIs.",
+        "solution": "An enterprise-grade, terminal-native AI database workspace connecting to PostgreSQL, MySQL, SQLite, MSSQL, and MongoDB with deterministic intent routing, semantic schema pruning, SQLGlot AST validation, proactive clarification dialogue, and OS-keyring security.",
+        "role": "Creator & Lead Developer"
+      },
+      "gallery": [
+        {
+          "src": "/images/projects/support/hero.png",
+          "type": "hero",
+          "title": "Interactive Workspace & Multi-Database Discovery",
+          "description": "Talk to your databases in plain English: AI-powered workspace supporting PostgreSQL, MySQL, SQLite, MSSQL, and MongoDB."
+        },
+        {
+          "src": "/images/projects/support/demo.png",
+          "type": "feature",
+          "title": "Natural Language SQL Query Execution",
+          "description": "Live interactive query generation and execution against PostgreSQL with read-only transaction protection, AST validation, and tabular results in 34ms."
+        },
+        {
+          "src": "/images/projects/support/demo2.png",
+          "type": "feature",
+          "title": "Interactive REPL & Clarification Flow",
+          "description": "Multi-turn schema exploration, contextual follow-ups, and proactive clarification for ambiguous queries."
+        },
+        {
+          "src": "/images/projects/support/multidb.png",
+          "type": "feature",
+          "title": "Multi-Database Switching & Clarification Engine",
+          "description": "Cross-engine support across 5 databases with interactive clarification dialogue for ambiguous queries."
+        }
+      ],
+      "features": [
+        {
+          "name": "Multi-Database Unified Engine",
+          "description": "Native driver integrations for PostgreSQL, MySQL, SQLite, Microsoft SQL Server, and MongoDB with connection pooling and latency monitoring."
+        },
+        {
+          "name": "Deterministic Intent Routing & Schema Isolation",
+          "description": "Bypasses heavy LLM loops for standard exploratory queries and semantically isolates relevant tables, slashing prompt tokens by 60-80%."
+        },
+        {
+          "name": "SQLGlot AST Safety & Read-Only Guardrails",
+          "description": "Strict AST parsing validates dialect syntax, guarantees read-only semantics, and blocks destructive operations without explicit confirmation."
+        },
+        {
+          "name": "Proactive Clarification & Self-Repair",
+          "description": "Identifies underspecified queries and requests targeted clarification before generation, with an autonomous self-repair feedback loop for execution errors."
+        },
+        {
+          "name": "OS Native Keyring Credential Security",
+          "description": "Eliminates plaintext passwords in .env files by storing connection credentials and API keys in Windows Credential Manager, macOS Keychain, or Linux Secret Service."
+        },
+        {
+          "name": "Multi-Provider LLM Gateway",
+          "description": "Zero-dependency switching between offline local models via Ollama and cloud providers (Google Gemini, xAI Grok) with live latency benchmarks."
+        }
+      ],
+      "technicalDecisions": [
+        {
+          "decision": "SQLGlot AST Parsing over Regex / Direct LLM Prompting",
+          "technology": "SQLGlot AST Parser",
+          "reasoning": "Provides rigorous dialect-specific syntax verification and deterministic statement analysis to enforce read-only safety guarantees before execution."
+        },
+        {
+          "decision": "Conservative Schema Selection via Semantic Scoring",
+          "technology": "Graph-based Schema Pruning",
+          "reasoning": "Isolates only tables with high semantic affinity and active foreign-key links, preserving context window tokens and eliminating LLM hallucination."
+        },
+        {
+          "decision": "Hardware-Enforced OS Keyring Security",
+          "technology": "Keyring Python API (Windows Credential Manager / macOS Keychain)",
+          "reasoning": "Encrypts sensitive database connection strings and LLM provider keys at the operating system level rather than storing credentials in plaintext files."
+        }
+      ],
+      "architecture": null,
+      "challenges": [],
+      "metrics": [],
+      "learnings": [],
+      "future": []
+    },
+    {
       "id": "commit",
       "title": "Commit",
       "subtitle": "AI Git commit generator powered by local LLM via Ollama",
       "status": "Completed",
       "featured": true,
-      "order": 2,
+      "order": 3,
       "period": {
         "start": "2026",
         "end": "2026"
@@ -363,7 +473,7 @@
       "subtitle": "Disaster-response coordination system",
       "status": "Completed",
       "featured": true,
-      "order": 3,
+      "order": 4,
       "period": {
         "start": "2024",
         "end": "2024"
@@ -423,7 +533,7 @@
       "subtitle": "Desktop hydration-tracking application",
       "status": "Completed",
       "featured": false,
-      "order": 4,
+      "order": 5,
       "period": {
         "start": "2024",
         "end": "2024"
@@ -468,7 +578,7 @@
       "subtitle": "Real-time AI retail analytics engine with pose tracking, heatmaps, and privacy anonymization",
       "status": "Completed",
       "featured": true,
-      "order": 5,
+      "order": 6,
       "period": {
         "start": "2024",
         "end": "2024"
