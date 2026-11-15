@@ -387,7 +387,7 @@
     {
       "id": "commit",
       "title": "Commit",
-      "subtitle": "AI Git commit generator powered by local LLM via Ollama",
+      "subtitle": "AI Conventional Commit CLI with dual terminal appearance modes and local Ollama inference",
       "status": "Completed",
       "featured": true,
       "order": 3,
@@ -412,57 +412,89 @@
         "demo": null
       },
       "overview": {
-        "problem": "Crafting clean, descriptive, and standardized Conventional Commit messages for complex or multi-file staged diffs is tedious, and sending proprietary source code to external cloud AI APIs poses serious privacy risks.",
-        "solution": "A lightweight, zero-dependency local CLI tool that inspects staged Git changes and prompts a locally running LLM through Ollama (e.g. qwen2.5-coder:7b) to generate structured Conventional Commits, featuring Map-Reduce synthesis for massive diffs and full interactive controls.",
+        "problem": "Writing descriptive, standardized Conventional Commit messages across multi-file or complex diffs interrupts developer flow, while sending proprietary source code or diffs to cloud LLMs creates significant confidentiality, compliance, and privacy risks.",
+        "solution": "A modular, privacy-first CLI package (commit-ai) that inspects staged Git changes and prompts local Ollama models (e.g. qwen2.5-coder:7b) to generate strict Conventional Commits. Features dual UI presets (Minimal stream vs full-screen Rich TUI), SHA-256 staged snapshot verification to prevent race conditions, smart diff chunking with prompt injection defense, user feedback loops, and self-contained cross-platform installers.",
         "role": "Creator & Core Developer"
       },
       "gallery": [
         {
           "src": "/images/projects/commit/hero.png",
           "type": "hero",
-          "title": "Interactive CLI & Conventional Commit Generation",
-          "description": "Pre-flight Ollama health check, staged file listing, live streaming spinner, and interactive [Y/E/R/N] commit menu."
+          "title": "Interactive CLI & Guided Review Flow",
+          "description": "Pre-flight environment diagnostics, staged diff summary, live generation with elapsed timer, and instant single-key review actions."
         },
         {
-          "src": "/images/projects/commit/commit.png",
+          "src": "/images/projects/commit/minimal_mode.png",
           "type": "feature",
-          "title": "Map-Reduce Engine for Large Diffs",
-          "description": "Intelligent multi-stage pipeline: auto-filtering lockfiles, preserving file boundaries across chunks, parallel per-chunk summarization, and final synthesis."
+          "title": "Minimal Appearance Mode (Default)",
+          "description": "Fast, clean in-place terminal stream output with live elapsed timer, leaving terminal scrollback intact for everyday shell workflows."
+        },
+        {
+          "src": "/images/projects/commit/rich_mode.png",
+          "type": "feature",
+          "title": "Rich Appearance Mode (Full-Screen TUI)",
+          "description": "Immersive full-screen terminal UI powered by Prompt Toolkit, featuring animated progress indicators, styled metadata panels, and keyboard shortcuts."
         }
       ],
       "features": [
         {
-          "name": "Local LLM Execution via Ollama",
-          "description": "Runs entirely on your machine with models like qwen2.5-coder:7b. No external APIs, no internet required, ensuring complete code confidentiality."
+          "name": "Strict Conventional Commits",
+          "description": "Automatically detects commit types (feat, fix, docs, refactor, test, perf, chore), identifies concise scopes, highlights breaking changes, and structures descriptive subjects and bullet points."
         },
         {
-          "name": "Interactive Commit Flow",
-          "description": "Prompt menu allows one-key actions: Accept & commit (Y), open in external editor like Notepad/$EDITOR/nano (E), regenerate (R), or cancel (N)."
+          "name": "Zero-Cloud Local AI Inference",
+          "description": "Executes 100% locally via Ollama (qwen2.5-coder:7b/3b, deepseek-coder) with automatic context length detection and keep-alive memory residency tuning. Zero telemetry, tracking, or network leaks."
         },
         {
-          "name": "Map-Reduce for Large Diffs",
-          "description": "Automatically filters lockfiles and generated assets, splits huge staged diffs without breaking files apart, generates per-chunk summaries, and synthesizes one coherent message."
+          "name": "Dual Terminal Appearance Modes",
+          "description": "Fast in-place 'Minimal' stream output with live elapsed timer (zero screen clear, preserving terminal scrollback) alongside an immersive full-screen 'Rich' terminal UI powered by Prompt Toolkit with styled panels and overflow protection."
         },
         {
-          "name": "Commit History Logger & Zero-Dependency Setup",
-          "description": "Appends every successful commit with timestamp and repo path to commit_history.json. Built with pure Python standard library for zero pip installation overhead."
+          "name": "Interactive Review & User Feedback Loop",
+          "description": "One-key review shortcuts: Commit (Enter), field-by-field or external editor (e: nvim, code, nano), regenerate with natural language feedback (r), or cancel (q / Esc)."
+        },
+        {
+          "name": "Cryptographic Staged Snapshot Verification",
+          "description": "Computes a SHA-256 fingerprint of staged changes and HEAD before generation; immediately detects and blocks commit execution if the index was altered during review, preventing race conditions."
+        },
+        {
+          "name": "Self-Contained Isolated Installers",
+          "description": "Native cross-platform installers (install.sh, install.bat, install.ps1) using Python's standard library venv and ensurepip to install into isolated user directories with zero pipx, uv, or global pip dependencies."
+        },
+        {
+          "name": "Flexible Workflow & Pipeline Modes",
+          "description": "Supports Guided interactive flow, Quick mode (-q), non-interactive --stdout output for shell pipelines, --dry-run previews, and --yes (-y) confirmation skips while preserving all Git hooks and GPG/SSH signatures."
+        },
+        {
+          "name": "Diagnostic Suite & TOML Configuration",
+          "description": "Built-in 'commit doctor' command to diagnose Git repositories, Python environments, and Ollama endpoint connectivity; persistent user settings managed via 'commit config' CLI and environment variable overrides."
         }
       ],
       "technicalDecisions": [
         {
-          "decision": "Zero-Cloud Local Inference Architecture",
-          "technology": "Ollama REST API",
-          "reasoning": "Eliminates privacy concerns by keeping sensitive diffs and proprietary source code strictly on the local developer machine."
+          "decision": "Cryptographic Index Fingerprinting & Git Safety Guarantees",
+          "technology": "SHA-256 Hash Digesting & Native Git Subprocess",
+          "reasoning": "Detects index mutations occurring between message generation and execution without locking Git repositories, while preserving pre-commit hooks, commit-msg hooks, and GPG/SSH commit signatures without destructive operations."
         },
         {
-          "decision": "Hierarchical Map-Reduce Diff Chunking",
-          "technology": "Custom Python Diff Parser",
-          "reasoning": "Diffs exceeding 20,000 characters trigger automatic filtering of lockfiles, file-boundary preservation, and two-tier summarization to prevent LLM context overflows and hallucinations."
+          "decision": "Dual Terminal Architecture & UX Presets",
+          "technology": "Typer, Rich & Prompt Toolkit",
+          "reasoning": "Provides a non-intrusive stream output (Minimal) that leaves terminal scrollback intact for everyday multiplexer workflows, alongside a full-screen reactive terminal UI (Rich) with keyboard event handling and automatic NO_COLOR detection."
         },
         {
-          "decision": "Pure Standard-Library Implementation",
-          "technology": "Python 3.8+ (urllib, subprocess, json, os)",
-          "reasoning": "Removes all third-party package dependencies and virtual environment requirements, enabling instant global PATH execution across Windows, Linux, and macOS."
+          "decision": "Self-Contained Isolated Installer Architecture",
+          "technology": "Python 3.10+ Standard Library (venv, ensurepip)",
+          "reasoning": "Avoids polluting system Python or requiring third-party package managers (pipx, uv, conda) by creating a sandboxed user virtual environment with consent-based PATH registration and cross-platform shell wrappers."
+        },
+        {
+          "decision": "Zero-Cloud Local Inference & Keep-Alive Tuning",
+          "technology": "Ollama REST API & HTTPX Keep-Alive",
+          "reasoning": "Guarantees complete source code confidentiality over the local loopback interface (127.0.0.1) while optimizing model residency in GPU/RAM to eliminate repetitive cold-start latencies."
+        },
+        {
+          "decision": "Boundary-Preserving Diff Chunking & Prompt Injection Defense",
+          "technology": "Token Budgeting & AST Boundary Parser",
+          "reasoning": "Splits massive multi-file diffs along clean file boundaries while isolating prompt injections and noisy lockfile churn, synthesizing standard-compliant Conventional Commits without exceeding LLM context windows."
         }
       ],
       "architecture": null,
