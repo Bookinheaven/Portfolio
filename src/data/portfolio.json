@@ -6,7 +6,12 @@
     "tagline": "I build AI-powered applications, scalable backend systems, and modern web experiences.",
     "email": "tanviksriram@gmail.com",
     "location": "Andhra Pradesh, India",
-    "resumeUrl": "/resume.pdf",
+    "resumeUrl": "/Tanvik_Sri_Ram_Reddy_General_Resume.pdf",
+    "resumes": {
+      "general": "/Tanvik_Sri_Ram_Reddy_General_Resume.pdf",
+      "fullstack": "/Tanvik_Sri_Ram_Reddy_FullStack_Resume.pdf",
+      "ai": "/Tanvik_Sri_Ram_Reddy_AI_Resume.pdf"
+    },
     "availability": "Open to internships, collaborations, and Software Engineering opportunities"
   },
   "socials": [

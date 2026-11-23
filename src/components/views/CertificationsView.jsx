@@ -1,5 +1,5 @@
 import data from '../../data/portfolio.json';
-import { FiAward, FiExternalLink } from 'react-icons/fi';
+import { FiAward, FiExternalLink, FiDownload } from 'react-icons/fi';
 
 const CertificationsView = ({ id }) => {
   return (
@@ -39,10 +39,38 @@ const CertificationsView = ({ id }) => {
           ))}
         </div>
         
-        <div className="mt-24 text-center">
-          <a href={data.personal.resumeUrl} target="_blank" rel="noopener noreferrer" className="edge-glow-solid px-8 py-4 font-medium inline-block">
-            Download Full Resume
+        <div className="mt-24 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4">
+          <a
+            href={data.personal.resumes?.general || data.personal.resumeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="edge-glow-solid px-6 py-3.5 font-medium inline-flex items-center justify-center gap-2 rounded-lg hover:scale-105 transition-transform duration-200 w-full sm:w-auto"
+          >
+            <FiDownload className="w-4 h-4" />
+            <span>General Resume</span>
           </a>
+          {data.personal.resumes?.fullstack && (
+            <a
+              href={data.personal.resumes.fullstack}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="edge-glow-solid px-6 py-3.5 font-medium inline-flex items-center justify-center gap-2 rounded-lg hover:scale-105 transition-transform duration-200 w-full sm:w-auto"
+            >
+              <FiDownload className="w-4 h-4" />
+              <span>Full-Stack Resume</span>
+            </a>
+          )}
+          {data.personal.resumes?.ai && (
+            <a
+              href={data.personal.resumes.ai}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="edge-glow-solid px-6 py-3.5 font-medium inline-flex items-center justify-center gap-2 rounded-lg hover:scale-105 transition-transform duration-200 w-full sm:w-auto"
+            >
+              <FiDownload className="w-4 h-4" />
+              <span>AI Resume</span>
+            </a>
+          )}
         </div>
         </div>
       </div>
