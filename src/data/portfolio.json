@@ -269,7 +269,7 @@
       "order": 2,
       "period": { "start": "2026", "end": "Present" },
       "tags": ["CLI Tool", "AI / LLM", "Database", "Developer Tools"],
-      "skills": ["python", "postgresql", "mongodb", "mysql", "sqlite", "ollama", "git"],
+      "skills": ["python", "postgresql", "mongodb", "mysql", "sqlite", "ollama"],
       "links": { "github": "https://github.com/Bookinheaven/Support" },
       "overview": {
         "problem": "Querying unfamiliar schemas across multiple database engines requires repetitive joins and boilerplate, while naive cloud Text-to-SQL tools hallucinate syntax, risk destructive writes, and expose sensitive schemas to third-party APIs.",
@@ -523,7 +523,7 @@
       "order": 6,
       "period": { "start": "2024", "end": "2024" },
       "tags": ["Computer Vision", "AI / LLM", "Retail Analytics"],
-      "skills": ["python", "yolov8", "deepsort", "openvino", "git"],
+      "skills": ["python", "yolov8", "deepsort", "openvino"],
       "links": { "github": "https://github.com/Bookinheaven/InsightEX" },
       "overview": {
         "problem": "Retailers lack real-time visibility into foot traffic and dwell bottlenecks, while raw CCTV analytics compromise shopper privacy and break under crowd occlusions.",
