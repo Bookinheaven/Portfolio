@@ -5,7 +5,31 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
+  <meta name="theme-color" content="#000000" />
+  <title>Tanvik Sri Ram Reddy — Software Engineer</title>
+  <meta name="description" content="B.Tech CSE undergraduate building local AI developer tools, multi-database engines, and cross-platform web & desktop software." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tanvik Sri Ram Reddy — Software Engineer" />
+  <meta property="og:description" content="Portfolio featuring local AI developer tools (Support, Commit), behavioral productivity systems (Athena), and computer vision analytics (InsightEX)." />
+  <meta property="og:url" content="https://tanviksriram.vercel.app" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tanvik Sri Ram Reddy — Software Engineer" />
+  <meta name="twitter:description" content="Computer Science undergrad building local AI developer tools, backend systems, and cross-platform software." />
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('portfolio-theme');
+        var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+        var isLight = saved === 'light' || (!saved && prefersLight);
+        var root = document.documentElement;
+        if (isLight) {
+          root.classList.remove('dark');
+        } else {
+          root.classList.add('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 
 <body>

@@ -3,16 +3,22 @@
     "name": "Tanvik Sri Ram Reddy",
     "initials": "TS",
     "role": "Software Engineer",
-    "tagline": "I build AI-powered applications, scalable backend systems, and modern web experiences.",
+    "tagline": "Building local AI developer tools, scalable backend systems, and cross-platform web & desktop software.",
     "email": "tanviksriram@gmail.com",
-    "location": "Andhra Pradesh, India",
-    "resumeUrl": "/Tanvik_Sri_Ram_Reddy_General_Resume.pdf",
+    "location": "Coimbatore / Andhra Pradesh, India",
+    "githubUsername": "Bookinheaven",
+    "education": {
+      "institution": "Karunya Institute of Technology and Sciences",
+      "degree": "B.Tech, Computer Science and Engineering",
+      "period": "Jul 2023 – May 2027",
+      "cgpa": "8.98 / 10"
+    },
     "resumes": {
       "general": "/Tanvik_Sri_Ram_Reddy_General_Resume.pdf",
       "fullstack": "/Tanvik_Sri_Ram_Reddy_FullStack_Resume.pdf",
       "ai": "/Tanvik_Sri_Ram_Reddy_AI_Resume.pdf"
     },
-    "availability": "Open to internships, collaborations, and Software Engineering opportunities"
+    "availability": "Open to SWE internships & 2027 new-grad engineering roles"
   },
   "socials": [
     {
@@ -48,236 +54,211 @@
   ],
   "about": {
     "story": [
-      "I'm a Software Engineering student at Karunya Institute of Technology and Sciences, passionate about building intelligent software that combines Artificial Intelligence, backend engineering, and thoughtful user experiences.",
-      "My current focus is on developing AI-powered productivity software, scalable backend architectures, and full-stack applications. I'm also strengthening my skills in Data Structures & Algorithms, System Design, and Competitive Programming."
+      "I'm a Computer Science & Engineering undergraduate at Karunya Institute of Technology and Sciences (CGPA 8.98/10). I build developer CLI tools, layered backend systems, and desktop/web software.",
+      "Recently, I've been focused on local-first AI tooling—from SQL AST validation across six database engines to drift-free productivity timers—while sharpening fundamentals in Data Structures, Algorithms, and System Design."
     ],
     "currentFocus": [
       "Full-stack engineering",
-      "Backend systems",
-      "AI / ML",
-      "UI / UX"
+      "Backend & DB systems",
+      "Local AI / LLM tooling",
+      "UI / UX & TUI design"
     ],
     "currentlyExploring": [
-      "Transformers",
+      "AST & Compiler Tooling",
       "System Design",
-      "Backend architecture",
-      "AI engineering"
+      "Distributed Architecture",
+      "Transformers"
     ],
     "milestones": {
-      "2026": "AI Tools & Systems",
-      "2025": "Deepening Backend & AI/ML"
-    }
+      "2026": "Local AI CLI Tools & Systems",
+      "2025": "Full-Stack Architecture & Hackathons"
+    },
+    "experience": [
+      {
+        "role": "Project Team Lead",
+        "organization": "Intel Unnati Industrial Training Program",
+        "period": "Mar 2025 – Apr 2025",
+        "summary": "Led team planning, task delegation, and end-to-end delivery of the InsightEX real-time AI retail analytics platform."
+      },
+      {
+        "role": "Python Developer Intern",
+        "organization": "CodTech IT Solutions",
+        "period": "Aug 2024 – Sep 2024",
+        "summary": "Built Python applications end-to-end, applying OOP design, debugging, and maintainable testing practices."
+      }
+    ],
+    "achievements": [
+      {
+        "title": "College-Level Finalist (Team Leader)",
+        "event": "Smart India Hackathon (SIH) 2025",
+        "year": "2025",
+        "summary": "Led a multidisciplinary team from ideation to working prototype, advancing to the college-level finalist round."
+      },
+      {
+        "title": "Team Leader",
+        "event": "G-K Hackathon – Digital Campus 2.0 (Google Cloud #HackSprint)",
+        "year": "2025",
+        "summary": "Coordinated a six-member team across architecture, task allocation, and final product presentation."
+      },
+      {
+        "title": "1st Place (Rank 1)",
+        "event": "Hack&Build: Full-Stack Bootcamp",
+        "year": "Mar 2025",
+        "summary": "Built an asynchronous full-stack contact management web application using Express.js and Fetch API validation."
+      }
+    ]
   },
   "skills": [
-    {
-      "id": "java",
-      "name": "Java",
-      "category": "Languages"
-    },
-    {
-      "id": "python",
-      "name": "Python",
-      "category": "Languages"
-    },
-    {
-      "id": "javascript",
-      "name": "JavaScript",
-      "category": "Languages"
-    },
-    {
-      "id": "react",
-      "name": "React",
-      "category": "Frontend"
-    },
-    {
-      "id": "nodejs",
-      "name": "Node.js",
-      "category": "Backend"
-    },
-    {
-      "id": "express",
-      "name": "Express.js",
-      "category": "Backend"
-    },
-    {
-      "id": "fastapi",
-      "name": "FastAPI",
-      "category": "Backend"
-    },
-    {
-      "id": "mongodb",
-      "name": "MongoDB",
-      "category": "Database"
-    },
-    {
-      "id": "postgresql",
-      "name": "PostgreSQL",
-      "category": "Database"
-    },
-    {
-      "id": "jwt",
-      "name": "JWT",
-      "category": "Tools"
-    },
-    {
-      "id": "yolov8",
-      "name": "YOLOv8",
-      "category": "AI / ML"
-    },
-    {
-      "id": "deepsort",
-      "name": "DeepSORT",
-      "category": "AI / ML"
-    },
-    {
-      "id": "openvino",
-      "name": "OpenVINO",
-      "category": "AI / ML"
-    },
-    {
-      "id": "tailwindcss",
-      "name": "Tailwind CSS",
-      "category": "Frontend"
-    },
-    {
-      "id": "git",
-      "name": "Git",
-      "category": "Tools"
-    },
-    {
-      "id": "ollama",
-      "name": "Ollama",
-      "category": "AI / ML"
-    }
+    { "id": "python", "name": "Python", "category": "Languages" },
+    { "id": "javascript", "name": "JavaScript", "category": "Languages" },
+    { "id": "java", "name": "Java", "category": "Languages" },
+    { "id": "react", "name": "React", "category": "Frontend" },
+    { "id": "electron", "name": "Electron", "category": "Frontend" },
+    { "id": "tailwindcss", "name": "Tailwind CSS", "category": "Frontend" },
+    { "id": "nodejs", "name": "Node.js", "category": "Backend" },
+    { "id": "express", "name": "Express.js", "category": "Backend" },
+    { "id": "fastapi", "name": "FastAPI", "category": "Backend" },
+    { "id": "postgresql", "name": "PostgreSQL", "category": "Database" },
+    { "id": "mongodb", "name": "MongoDB", "category": "Database" },
+    { "id": "mysql", "name": "MySQL", "category": "Database" },
+    { "id": "sqlite", "name": "SQLite", "category": "Database" },
+    { "id": "drizzle", "name": "Drizzle ORM", "category": "Database" },
+    { "id": "ollama", "name": "Ollama", "category": "AI / ML" },
+    { "id": "yolov8", "name": "YOLOv8", "category": "AI / ML" },
+    { "id": "deepsort", "name": "DeepSORT", "category": "AI / ML" },
+    { "id": "openvino", "name": "OpenVINO", "category": "AI / ML" },
+    { "id": "git", "name": "Git", "category": "Tools" },
+    { "id": "jwt", "name": "JWT", "category": "Tools" }
   ],
   "projects": [
     {
       "id": "athena",
       "title": "Athena",
-      "subtitle": "Productivity platform",
+      "subtitle": "Cross-platform behavioral productivity & focus system for web and desktop",
       "status": "In Development",
       "featured": true,
       "order": 1,
-      "period": {
-        "start": "2026",
-        "end": "Present"
-      },
-      "tags": [
-        "Full Stack",
-        "Productivity"
-      ],
+      "period": { "start": "2026", "end": "Present" },
+      "tags": ["Full Stack", "Productivity"],
       "skills": [
+        "javascript",
         "react",
+        "electron",
+        "tailwindcss",
+        "nodejs",
         "express",
         "postgresql",
+        "drizzle",
         "jwt",
         "fastapi"
       ],
-      "heroImage": "/images/projects/athena/home.png",
-      "links": {
-        "github": "https://github.com/Bookinheaven/Athena",
-        "live": null,
-        "demo": null
-      },
+      "links": { "github": "https://github.com/Bookinheaven/Athena" },
       "overview": {
-        "problem": "People struggle to maintain focus and track productivity over long periods without getting overwhelmed by complex tools.",
-        "solution": "A full-stack productivity platform combining focus sessions, a task planner, adaptive streak tracking, and behavioral analytics.",
-        "role": "Full-stack Developer"
+        "problem": "People struggle to maintain focus and track productivity over long periods without getting overwhelmed by fragmented planning tools.",
+        "solution": "A full-stack web and Electron desktop platform combining a drift-free focus engine, recurring routines, time-blocked planning, and adaptive behavioral analytics.",
+        "role": "Full-Stack Developer"
       },
       "gallery": [
         {
           "src": "/images/projects/athena/home.png",
-          "type": "hero",
           "title": "Dashboard & Daily Focus",
           "description": "Visualizes daily target progress, adaptive streak metrics, behavioral insights, and prioritized next actions."
         },
         {
           "src": "/images/projects/athena/timer.png",
-          "type": "feature",
           "title": "Deep Focus Timer",
-          "description": "Distraction-free Pomodoro session timer with circular progress tracking, contextual pause tracking, and Zen mode."
+          "description": "Distraction-free Pomodoro workspace with circular progress tracking, contextual pause logging, and Zen mode."
         },
         {
           "src": "/images/projects/athena/planner.png",
-          "type": "feature",
           "title": "Daily Planner",
           "description": "Agenda view connecting planned tasks directly to focus sessions with an active task inventory sidebar."
         },
         {
           "src": "/images/projects/athena/planner-1.png",
-          "type": "feature",
           "title": "Task Inventory & Inspector",
-          "description": "Comprehensive task manager with priority filters, scheduling status, and detailed task inspector drawer."
+          "description": "Task manager with priority filters (P1–P4), scheduling status, and detailed inspector drawer."
         },
         {
           "src": "/images/projects/athena/planner-2.png",
-          "type": "feature",
           "title": "Goal Tracking & Milestones",
           "description": "Long-term objective tracker visualizing milestone completion progress and associated sub-tasks."
         },
         {
           "src": "/images/projects/athena/planner-3.png",
-          "type": "feature",
           "title": "Planning Notes & Markdown Editor",
-          "description": "Integrated rich-text and markdown editor supporting syntax code blocks and study scratchpads alongside tasks."
+          "description": "Integrated rich-text and markdown editor supporting syntax code blocks alongside tasks."
         },
         {
           "src": "/images/projects/athena/planner-4.png",
-          "type": "feature",
           "title": "Timeline & Time-Blocking",
-          "description": "Visual day calendar for time-blocking work segments, featuring drag-and-drop task queue and workload advisories."
+          "description": "Visual day calendar for time-blocking work segments with drag-and-drop scheduling and workload advisories."
         },
         {
           "src": "/images/projects/athena/history.png",
-          "type": "feature",
           "title": "Work Journal & Session History",
-          "description": "Historical work journal with calendar day navigation, planned task records, and logged focus session metrics."
+          "description": "Canonical YYYY-MM-DD calendar grid with planned task records and logged focus session metrics."
         },
         {
           "src": "/images/projects/athena/themes.png",
-          "type": "feature",
           "title": "Theme Customization",
-          "description": "Custom workspace styling with a suite of curated themes including high-contrast dark modes and vibrant color schemes."
+          "description": "14 built-in workspace themes spanning high-contrast monochrome dark modes and custom color palettes."
         },
         {
           "src": "/images/projects/athena/settings.png",
-          "type": "feature",
           "title": "Session & Workflow Settings",
-          "description": "Granular configuration for daily focus targets, Pomodoro break intervals, and automated workflow triggers."
+          "description": "Granular configuration for daily focus targets, Pomodoro intervals, and automated workflow triggers."
         },
         {
           "src": "/images/projects/athena/profile.png",
-          "type": "feature",
           "title": "Profile & Security Management",
-          "description": "User profile dashboard managing account credentials, activity timestamps, session security, and password authentication."
+          "description": "Account dashboard managing credentials, streak freeze protection, and session security."
         }
       ],
       "features": [
         {
-          "name": "Focus Sessions",
-          "description": "Customizable pomodoro and deep work timers."
+          "name": "Recurring Routines & Time-Blocked Planner",
+          "description": "Multi-step recurring routines integrated into a drag-and-drop timeline with collision avoidance, backlog triage (P1–P4), and strategic goals."
         },
         {
-          "name": "Adaptive Streaks",
-          "description": "Intelligent streak tracking that adapts to user behavior."
+          "name": "Adaptive Intelligence & Capacity Alerts",
+          "description": "14-day rolling target calibration (+5m/-5m suggestions) and overload warnings when scheduled work exceeds 130% of typical capacity."
         },
         {
-          "name": "Behavioral Analytics",
-          "description": "Visual dashboards to understand productivity patterns."
+          "name": "14 Curated Themes & Ambient Workspaces",
+          "description": "Standard, Zen, and Custom workspaces with built-in soundscapes, streak freeze protection, and cross-device session recovery."
         }
       ],
       "technicalDecisions": [
         {
-          "decision": "Migrating to PostgreSQL for relational consistency",
-          "technology": "PostgreSQL",
-          "reasoning": "Provides strict schema enforcement, relational integrity, and ACID guarantees for session telemetry, task hierarchies, and streak tracking."
+          "decision": "PostgreSQL + Drizzle ORM Layered API",
+          "technology": "PostgreSQL, Express 5 & Drizzle ORM",
+          "reasoning": "Provides strict schema enforcement, type-safe migrations, and ACID guarantees across 50+ REST endpoints covering tasks, routines, and session telemetry."
+        },
+        {
+          "decision": "React-Independent WallClockTimer FSM",
+          "technology": "Pure JS State Machine & requestAnimationFrame",
+          "reasoning": "Anchors timing to wall-clock timestamps independent of React render cycles, preventing browser tab throttling drift across web and Electron."
         }
       ],
-      "architecture": null,
-      "challenges": [],
-      "metrics": [],
-      "learnings": [],
-      "future": []
+      "architecture": [
+        { "layer": "Clients", "detail": "React 19 + Vite + Tailwind v4 + Electron 43 Desktop" },
+        { "layer": "API Layer", "detail": "Layered Express 5 (Routes → Controllers → Services → Models) + JWT Cookies" },
+        { "layer": "Persistence", "detail": "PostgreSQL + Drizzle ORM + Debounced Autosave Sync" },
+        { "layer": "Intelligence", "detail": "FastAPI Analytics + 14-Day Adaptive Capacity Engine" }
+      ],
+      "challenges": [
+        {
+          "challenge": "Fast calendar navigation triggering 429/4xx API retry storms",
+          "solution": "Implemented client-side in-memory request deduplication, debounced batched sync, and canonical YYYY-MM-DD date keys immune to timezone shifts."
+        }
+      ],
+      "metrics": [
+        { "label": "REST Endpoints", "value": "50+" },
+        { "label": "Workspace Themes", "value": "14" },
+        { "label": "Adaptive Window", "value": "14 Days" },
+        { "label": "Platforms", "value": "Web + Electron" }
+      ]
     },
     {
       "id": "support",
@@ -286,108 +267,86 @@
       "status": "Completed",
       "featured": true,
       "order": 2,
-      "period": {
-        "start": "2026",
-        "end": "Present"
-      },
-      "tags": [
-        "CLI Tool",
-        "AI / LLM",
-        "Database",
-        "Developer Tools"
-      ],
-      "skills": [
-        "python",
-        "postgresql",
-        "mongodb",
-        "ollama",
-        "git"
-      ],
-      "heroImage": "/images/projects/support/hero.png",
-      "links": {
-        "github": "https://github.com/Bookinheaven/Support",
-        "live": null,
-        "demo": null
-      },
+      "period": { "start": "2026", "end": "Present" },
+      "tags": ["CLI Tool", "AI / LLM", "Database", "Developer Tools"],
+      "skills": ["python", "postgresql", "mongodb", "mysql", "sqlite", "ollama", "git"],
+      "links": { "github": "https://github.com/Bookinheaven/Support" },
       "overview": {
-        "problem": "Engineers and data teams struggle to query complex schemas across heterogeneous databases without writing repetitive SQL joins, while naive cloud Text-to-SQL tools hallucinate queries, risk unauthorized mutations, and leak sensitive schemas to third-party APIs.",
-        "solution": "An enterprise-grade, terminal-native AI database workspace connecting to PostgreSQL, MySQL, SQLite, MSSQL, and MongoDB with deterministic intent routing, semantic schema pruning, SQLGlot AST validation, proactive clarification dialogue, and OS-keyring security.",
+        "problem": "Querying unfamiliar schemas across multiple database engines requires repetitive joins and boilerplate, while naive cloud Text-to-SQL tools hallucinate syntax, risk destructive writes, and expose sensitive schemas to third-party APIs.",
+        "solution": "A terminal-native AI database workspace connecting to PostgreSQL, MySQL, MariaDB, SQLite, MSSQL, and MongoDB with deterministic slash-command routing, relevance-based schema pruning, SQLGlot AST validation, and OS-keyring secret storage.",
         "role": "Creator & Lead Developer"
       },
       "gallery": [
         {
           "src": "/images/projects/support/hero.png",
-          "type": "hero",
           "title": "Interactive Workspace & Multi-Database Discovery",
-          "description": "Talk to your databases in plain English: AI-powered workspace supporting PostgreSQL, MySQL, SQLite, MSSQL, and MongoDB."
+          "description": "Talk to your databases in plain English across PostgreSQL, MySQL, MariaDB, SQLite, MSSQL, and MongoDB."
         },
         {
           "src": "/images/projects/support/demo.png",
-          "type": "feature",
           "title": "Natural Language SQL Query Execution",
-          "description": "Live interactive query generation and execution against PostgreSQL with read-only transaction protection, AST validation, and tabular results in 34ms."
+          "description": "Live query generation and execution against PostgreSQL with read-only transaction protection and tabular results in 34ms."
         },
         {
           "src": "/images/projects/support/demo2.png",
-          "type": "feature",
           "title": "Interactive REPL & Clarification Flow",
           "description": "Multi-turn schema exploration, contextual follow-ups, and proactive clarification for ambiguous queries."
         },
         {
           "src": "/images/projects/support/multidb.png",
-          "type": "feature",
           "title": "Multi-Database Switching & Clarification Engine",
-          "description": "Cross-engine support across 5 databases with interactive clarification dialogue for ambiguous queries."
+          "description": "Cross-engine profile switching with interactive disambiguation dialogue before query generation."
         }
       ],
       "features": [
         {
           "name": "Multi-Database Unified Engine",
-          "description": "Native driver integrations for PostgreSQL, MySQL, SQLite, Microsoft SQL Server, and MongoDB with connection pooling and latency monitoring."
+          "description": "Native driver integrations for PostgreSQL, MySQL, MariaDB, SQLite, SQL Server, and MongoDB with connection pooling and latency diagnostics."
         },
         {
-          "name": "Deterministic Intent Routing & Schema Isolation",
-          "description": "Bypasses heavy LLM loops for standard exploratory queries and semantically isolates relevant tables, slashing prompt tokens by 60-80%."
-        },
-        {
-          "name": "SQLGlot AST Safety & Read-Only Guardrails",
-          "description": "Strict AST parsing validates dialect syntax, guarantees read-only semantics, and blocks destructive operations without explicit confirmation."
-        },
-        {
-          "name": "Proactive Clarification & Self-Repair",
-          "description": "Identifies underspecified queries and requests targeted clarification before generation, with an autonomous self-repair feedback loop for execution errors."
-        },
-        {
-          "name": "OS Native Keyring Credential Security",
-          "description": "Eliminates plaintext passwords in .env files by storing connection credentials and API keys in Windows Credential Manager, macOS Keychain, or Linux Secret Service."
+          "name": "Deterministic Intent Routing & Clarification",
+          "description": "Bypasses LLM loops for standard `/tables` and `/describe` inspection, requests targeted clarification on ambiguous prompts, and self-repairs SQL execution errors."
         },
         {
           "name": "Multi-Provider LLM Gateway",
-          "description": "Zero-dependency switching between offline local models via Ollama and cloud providers (Google Gemini, xAI Grok) with live latency benchmarks."
+          "description": "Seamless switching between offline local Ollama tool-calling models and cloud providers (Gemini, Grok) with live latency telemetry."
         }
       ],
       "technicalDecisions": [
         {
-          "decision": "SQLGlot AST Parsing over Regex / Direct LLM Prompting",
+          "decision": "SQLGlot AST Parsing over Regex Validation",
           "technology": "SQLGlot AST Parser",
-          "reasoning": "Provides rigorous dialect-specific syntax verification and deterministic statement analysis to enforce read-only safety guarantees before execution."
+          "reasoning": "Enforces dialect-specific syntax verification and deterministic statement analysis to guarantee read-only safety and block unapproved mutations."
         },
         {
-          "decision": "Conservative Schema Selection via Semantic Scoring",
-          "technology": "Graph-based Schema Pruning",
-          "reasoning": "Isolates only tables with high semantic affinity and active foreign-key links, preserving context window tokens and eliminating LLM hallucination."
+          "decision": "Graph-Based Semantic Schema Pruning",
+          "technology": "Relevance Scoring & FK Traversal",
+          "reasoning": "Isolates only high-affinity tables and connected foreign-key paths, slashing prompt context size by 73% in a 12-table benchmark."
         },
         {
-          "decision": "Hardware-Enforced OS Keyring Security",
-          "technology": "Keyring Python API (Windows Credential Manager / macOS Keychain)",
-          "reasoning": "Encrypts sensitive database connection strings and LLM provider keys at the operating system level rather than storing credentials in plaintext files."
+          "decision": "OS-Native Keyring Credential Storage",
+          "technology": "Python Keyring (Secret Service / Keychain / Credential Manager)",
+          "reasoning": "Eliminates plaintext database passwords from `.env` and SQLite profile configs by delegating secrets to the OS credential store."
         }
       ],
-      "architecture": null,
-      "challenges": [],
-      "metrics": [],
-      "learnings": [],
-      "future": []
+      "architecture": [
+        { "layer": "Interface", "detail": "Typer CLI & Rich Interactive REPL with Slash-Command Router" },
+        { "layer": "AI & Context", "detail": "Ollama Tool-Calling Engine + Relevance Schema Pruner" },
+        { "layer": "Safety Gate", "detail": "SQLGlot AST Validation + Read-Only / Approval-Gated Execution" },
+        { "layer": "Connectors", "detail": "PostgreSQL, MySQL, MariaDB, SQLite, MSSQL, MongoDB + OS Keyring" }
+      ],
+      "challenges": [
+        {
+          "challenge": "Safely opening file-backed SQLite databases in WAL mode without risking corruption",
+          "solution": "Validated the 100-byte SQLite3 file header upfront and opened files strictly in read-only mode (`mode=ro`) rather than unsafe `immutable=1` flags."
+        }
+      ],
+      "metrics": [
+        { "label": "DB Engines", "value": "6 Supported" },
+        { "label": "Context Reduction", "value": "73%" },
+        { "label": "Query Latency", "value": "34 ms" },
+        { "label": "Secrets Storage", "value": "OS Keyring" }
+      ]
     },
     {
       "id": "commit",
@@ -396,357 +355,275 @@
       "status": "Completed",
       "featured": true,
       "order": 3,
-      "period": {
-        "start": "2026",
-        "end": "2026"
-      },
-      "tags": [
-        "CLI Tool",
-        "AI / LLM",
-        "Developer Tools"
-      ],
-      "skills": [
-        "python",
-        "git",
-        "ollama"
-      ],
-      "heroImage": "/images/projects/commit/hero.png",
-      "links": {
-        "github": "https://github.com/Bookinheaven/Commit",
-        "live": null,
-        "demo": null
-      },
+      "period": { "start": "2026", "end": "2026" },
+      "tags": ["CLI Tool", "AI / LLM", "Developer Tools"],
+      "skills": ["python", "git", "ollama"],
+      "links": { "github": "https://github.com/Bookinheaven/Commit" },
       "overview": {
-        "problem": "Writing descriptive, standardized Conventional Commit messages across multi-file or complex diffs interrupts developer flow, while sending proprietary source code or diffs to cloud LLMs creates significant confidentiality, compliance, and privacy risks.",
-        "solution": "A modular, privacy-first CLI package (commit-ai) that inspects staged Git changes and prompts local Ollama models (e.g. qwen2.5-coder:7b) to generate strict Conventional Commits. Features dual UI presets (Minimal stream vs full-screen Rich TUI), SHA-256 staged snapshot verification to prevent race conditions, smart diff chunking with prompt injection defense, user feedback loops, and self-contained cross-platform installers.",
+        "problem": "Writing descriptive, standardized Conventional Commit messages across multi-file diffs interrupts developer flow, while sending proprietary source code to cloud LLMs creates confidentiality risks.",
+        "solution": "A modular, local-first CLI package (`commit-ai`) that inspects staged Git diffs via Ollama to generate strict Conventional Commits, featuring dual UI presets, SHA-256 index fingerprinting, and self-contained cross-platform installers.",
         "role": "Creator & Core Developer"
       },
       "gallery": [
         {
           "src": "/images/projects/commit/hero.png",
-          "type": "hero",
           "title": "Interactive CLI & Guided Review Flow",
-          "description": "Pre-flight environment diagnostics, staged diff summary, live generation with elapsed timer, and instant single-key review actions."
+          "description": "Pre-flight environment diagnostics, staged diff summary, live generation with elapsed timer, and single-key review shortcuts."
         },
         {
           "src": "/images/projects/commit/minimal_mode.png",
-          "type": "feature",
           "title": "Minimal Appearance Mode (Default)",
-          "description": "Fast, clean in-place terminal stream output with live elapsed timer, leaving terminal scrollback intact for everyday shell workflows."
+          "description": "Fast, in-place terminal stream output with live elapsed timer, preserving terminal scrollback for daily shell workflows."
         },
         {
           "src": "/images/projects/commit/rich_mode.png",
-          "type": "feature",
           "title": "Rich Appearance Mode (Full-Screen TUI)",
-          "description": "Immersive full-screen terminal UI powered by Prompt Toolkit, featuring animated progress indicators, styled metadata panels, and keyboard shortcuts."
+          "description": "Full-screen terminal interface powered by Prompt Toolkit with animated progress indicators, structured metadata panels, and keyboard shortcuts."
         }
       ],
       "features": [
         {
-          "name": "Strict Conventional Commits",
-          "description": "Automatically detects commit types (feat, fix, docs, refactor, test, perf, chore), identifies concise scopes, highlights breaking changes, and structures descriptive subjects and bullet points."
+          "name": "Strict Conventional Commits & Feedback Loop",
+          "description": "Detects commit types and scopes automatically with single-key actions to commit (Enter), edit in `$EDITOR` (e), or regenerate with feedback (r)."
         },
         {
-          "name": "Zero-Cloud Local AI Inference",
-          "description": "Executes 100% locally via Ollama (qwen2.5-coder:7b/3b, deepseek-coder) with automatic context length detection and keep-alive memory residency tuning. Zero telemetry, tracking, or network leaks."
-        },
-        {
-          "name": "Dual Terminal Appearance Modes",
-          "description": "Fast in-place 'Minimal' stream output with live elapsed timer (zero screen clear, preserving terminal scrollback) alongside an immersive full-screen 'Rich' terminal UI powered by Prompt Toolkit with styled panels and overflow protection."
-        },
-        {
-          "name": "Interactive Review & User Feedback Loop",
-          "description": "One-key review shortcuts: Commit (Enter), field-by-field or external editor (e: nvim, code, nano), regenerate with natural language feedback (r), or cancel (q / Esc)."
-        },
-        {
-          "name": "Cryptographic Staged Snapshot Verification",
-          "description": "Computes a SHA-256 fingerprint of staged changes and HEAD before generation; immediately detects and blocks commit execution if the index was altered during review, preventing race conditions."
-        },
-        {
-          "name": "Self-Contained Isolated Installers",
-          "description": "Native cross-platform installers (install.sh, install.bat, install.ps1) using Python's standard library venv and ensurepip to install into isolated user directories with zero pipx, uv, or global pip dependencies."
-        },
-        {
-          "name": "Flexible Workflow & Pipeline Modes",
-          "description": "Supports Guided interactive flow, Quick mode (-q), non-interactive --stdout output for shell pipelines, --dry-run previews, and --yes (-y) confirmation skips while preserving all Git hooks and GPG/SSH signatures."
-        },
-        {
-          "name": "Diagnostic Suite & TOML Configuration",
-          "description": "Built-in 'commit doctor' command to diagnose Git repositories, Python environments, and Ollama endpoint connectivity; persistent user settings managed via 'commit config' CLI and environment variable overrides."
+          "name": "Pipeline, Diagnostics & TOML Config",
+          "description": "Supports `--stdout`, `--dry-run`, `--quick`, and `--yes` for scripts while preserving Git hooks and GPG signing, plus `commit doctor` and `commit config`."
         }
       ],
       "technicalDecisions": [
         {
-          "decision": "Cryptographic Index Fingerprinting & Git Safety Guarantees",
-          "technology": "SHA-256 Hash Digesting & Native Git Subprocess",
-          "reasoning": "Detects index mutations occurring between message generation and execution without locking Git repositories, while preserving pre-commit hooks, commit-msg hooks, and GPG/SSH commit signatures without destructive operations."
+          "decision": "SHA-256 Staged Snapshot Fingerprinting",
+          "technology": "SHA-256 Digest & Native Git Subprocess",
+          "reasoning": "Hashes staged diff state and HEAD before generation and re-verifies right before `git commit`, catching index edits made during review without locking Git."
         },
         {
-          "decision": "Dual Terminal Architecture & UX Presets",
+          "decision": "Dual Terminal Architecture (Minimal & Rich)",
           "technology": "Typer, Rich & Prompt Toolkit",
-          "reasoning": "Provides a non-intrusive stream output (Minimal) that leaves terminal scrollback intact for everyday multiplexer workflows, alongside a full-screen reactive terminal UI (Rich) with keyboard event handling and automatic NO_COLOR detection."
+          "reasoning": "Pairs a non-intrusive stream output (Minimal) for tmux/CI workflows with a full-screen reactive Prompt Toolkit TUI (Rich) featuring overflow protection."
         },
         {
-          "decision": "Self-Contained Isolated Installer Architecture",
-          "technology": "Python 3.10+ Standard Library (venv, ensurepip)",
-          "reasoning": "Avoids polluting system Python or requiring third-party package managers (pipx, uv, conda) by creating a sandboxed user virtual environment with consent-based PATH registration and cross-platform shell wrappers."
+          "decision": "Self-Contained User-Space Installers",
+          "technology": "Python 3.10+ venv & ensurepip",
+          "reasoning": "Provides `install.sh`, `install.bat`, and `install.ps1` that provision an isolated venv with consent-based PATH setup—zero pipx or uv required."
         },
         {
-          "decision": "Zero-Cloud Local Inference & Keep-Alive Tuning",
-          "technology": "Ollama REST API & HTTPX Keep-Alive",
-          "reasoning": "Guarantees complete source code confidentiality over the local loopback interface (127.0.0.1) while optimizing model residency in GPU/RAM to eliminate repetitive cold-start latencies."
-        },
-        {
-          "decision": "Boundary-Preserving Diff Chunking & Prompt Injection Defense",
-          "technology": "Token Budgeting & AST Boundary Parser",
-          "reasoning": "Splits massive multi-file diffs along clean file boundaries while isolating prompt injections and noisy lockfile churn, synthesizing standard-compliant Conventional Commits without exceeding LLM context windows."
+          "decision": "Boundary-Preserving Diff Chunking & Prompt Defense",
+          "technology": "Token Budgeting & Lockfile Filtering",
+          "reasoning": "Filters lockfile churn, splits oversized diffs cleanly along file boundaries, and isolates diff payloads against prompt injection."
         }
       ],
-      "architecture": null,
-      "challenges": [],
-      "metrics": [],
-      "learnings": [],
-      "future": []
+      "architecture": [
+        { "layer": "CLI & Presets", "detail": "Typer Entrypoint + Minimal Stream & Rich Prompt-Toolkit TUI" },
+        { "layer": "Git Safety", "detail": "SHA-256 Staged & HEAD Fingerprinting + Native Hook Preservation" },
+        { "layer": "Diff Engine", "detail": "Lockfile Filter + Boundary-Preserving Chunking + Prompt Injection Guard" },
+        { "layer": "Local LLM", "detail": "Ollama HTTPX Client with Context Detection & Keep-Alive Tuning" }
+      ],
+      "metrics": [
+        { "label": "UI Presets", "value": "Minimal + Rich" },
+        { "label": "Index Guard", "value": "SHA-256" },
+        { "label": "OS Installers", "value": "3 Platforms" },
+        { "label": "Cloud Calls", "value": "0 (100% Local)" }
+      ]
     },
     {
       "id": "resqit",
       "title": "ResQit",
-      "subtitle": "Disaster-response coordination system",
+      "subtitle": "End-to-end Java desktop disaster-response coordination system with dynamic theming",
       "status": "Completed",
       "featured": true,
       "order": 4,
-      "period": {
-        "start": "2024",
-        "end": "2024"
-      },
-      "tags": [
-        "Backend System"
-      ],
-      "skills": [
-        "java",
-        "postgresql"
-      ],
-      "heroImage": "/images/projects/resqit.png",
-      "links": {
-        "github": "https://github.com/Bookinheaven/ResQit",
-        "live": null,
-        "demo": null
-      },
+      "period": { "start": "2024", "end": "2024" },
+      "tags": ["Desktop Application", "Full Stack"],
+      "skills": ["java", "postgresql"],
+      "links": { "github": "https://github.com/Bookinheaven/ResQit" },
       "overview": {
-        "problem": "Lack of unified platforms for coordinating disaster response among admins, volunteers, and requesters.",
-        "solution": "A Java-based coordination system with role-based access control and team management features.",
-        "role": "Backend Developer"
+        "problem": "Disaster-relief volunteers, admins, and affected citizens lack a unified platform to coordinate requests, teams, and resource dispatch reliably.",
+        "solution": "An end-to-end Java desktop application built with JavaFX, Swing, and PostgreSQL featuring user authentication, 4-tier role-based access control, volunteer team dispatch, and light/dark UI theming.",
+        "role": "Creator & Full-Stack Developer"
       },
       "gallery": [
         {
           "src": "/images/projects/resqit.png",
-          "type": "hero",
           "title": "System Interface",
-          "description": "Main control panel for role-based access."
+          "description": "Main control panel for role-based disaster response coordination."
         }
       ],
       "features": [
         {
-          "name": "Role-based Access",
-          "description": "Distinct interfaces for administrators, volunteers, and requesters."
+          "name": "Role-Based Auth & Access Control",
+          "description": "Secure registration and login scoping interfaces across administrators, co-admins, volunteers, and citizens."
         },
         {
-          "name": "Team Management",
-          "description": "Tools for organizing and deploying volunteer teams."
+          "name": "Disaster Requests & Team Dispatch",
+          "description": "Structured submission for aid and resources alongside volunteer onboarding, team creation, and deployment tracking."
+        },
+        {
+          "name": "Dynamic Light & Dark UI Theming",
+          "description": "Custom JavaFX and Swing desktop interface supporting runtime light and dark mode switching."
         }
       ],
       "technicalDecisions": [
         {
-          "decision": "Choosing PostgreSQL with JDBC",
-          "technology": "PostgreSQL & JDBC",
-          "reasoning": "Provided strong relational data integrity for user roles and deployment records."
+          "decision": "JavaFX & Swing Client Paired with JDBC Query Scoping",
+          "technology": "Java, JavaFX, Swing & PostgreSQL",
+          "reasoning": "Built the full desktop UI and database layer together, enforcing relational integrity across incident assignments and scoping visibility by role in SQL."
         }
       ],
-      "architecture": null,
-      "challenges": [],
-      "metrics": [],
-      "learnings": [],
-      "future": []
+      "architecture": [
+        { "layer": "Desktop UI", "detail": "JavaFX & Swing Interface with Light/Dark Dynamic Theming" },
+        { "layer": "Auth & RBAC", "detail": "Registration, Login & 4-Tier Role Scoping (Admin, Co-Admin, Volunteer, User)" },
+        { "layer": "Workflows", "detail": "Disaster Aid Request Routing & Volunteer Team Management" },
+        { "layer": "Persistence", "detail": "PostgreSQL Relational Schema via JDBC" }
+      ],
+      "metrics": [
+        { "label": "User Roles", "value": "4 Tiers" },
+        { "label": "GUI Stack", "value": "JavaFX + Swing" },
+        { "label": "UI Themes", "value": "Light & Dark" },
+        { "label": "Data Layer", "value": "JDBC + Postgres" }
+      ]
     },
     {
       "id": "aquatrack",
       "title": "AquaTrack",
-      "subtitle": "Desktop hydration-tracking application",
+      "subtitle": "Desktop hydration-tracking application with daily analytics",
       "status": "Completed",
       "featured": false,
       "order": 5,
-      "period": {
-        "start": "2024",
-        "end": "2024"
-      },
-      "tags": [
-        "Desktop Application"
-      ],
-      "skills": [
-        "python",
-        "postgresql"
-      ],
-      "heroImage": "/images/projects/aquatrack.png",
-      "links": {
-        "github": "https://github.com/Bookinheaven/AquaTrack",
-        "live": null,
-        "demo": null
-      },
+      "period": { "start": "2024", "end": "2024" },
+      "tags": ["Desktop Application"],
+      "skills": ["python", "postgresql"],
+      "links": { "github": "https://github.com/Bookinheaven/AquaTrack" },
       "overview": {
-        "problem": "Users needed a lightweight desktop app to track hydration without relying on mobile apps.",
-        "solution": "A Python GUI application with user authentication, daily analytics, and historical visualizations.",
+        "problem": "Users wanted a lightweight desktop utility to log hydration and inspect daily progress without relying on mobile apps.",
+        "solution": "A Python desktop GUI application featuring user authentication, daily intake targets, historical charts, and structured error logging.",
         "role": "Developer"
       },
       "gallery": [
         {
           "src": "/images/projects/aquatrack.png",
-          "type": "hero",
           "title": "Analytics Dashboard",
           "description": "Daily progress and historical intake visualizations."
         }
       ],
-      "features": [],
-      "technicalDecisions": [],
-      "architecture": null,
-      "challenges": [],
-      "metrics": [],
-      "learnings": [],
-      "future": []
+      "features": [
+        {
+          "name": "Daily Goal & Intake Logging",
+          "description": "Quick desktop entry for daily hydration targets with persistent PostgreSQL user profiles and historical trend views."
+        }
+      ],
+      "technicalDecisions": []
     },
     {
       "id": "insightex",
       "title": "InsightEX",
-      "subtitle": "Real-time AI retail analytics engine with pose tracking, heatmaps, and privacy anonymization",
+      "subtitle": "Real-time AI retail analytics engine with pose tracking, heatmaps, and GDPR anonymization",
       "status": "Completed",
       "featured": true,
       "order": 6,
-      "period": {
-        "start": "2024",
-        "end": "2024"
-      },
-      "tags": [
-        "Computer Vision",
-        "Retail Analytics",
-        "Deep Learning"
-      ],
-      "skills": [
-        "python",
-        "yolov8",
-        "deepsort",
-        "openvino"
-      ],
-      "heroImage": "/images/projects/insightex/hero.png",
-      "links": {
-        "github": "https://github.com/Bookinheaven/InsightEX",
-        "live": null,
-        "demo": null
-      },
+      "period": { "start": "2024", "end": "2024" },
+      "tags": ["Computer Vision", "AI / LLM", "Retail Analytics"],
+      "skills": ["python", "yolov8", "deepsort", "openvino", "git"],
+      "links": { "github": "https://github.com/Bookinheaven/InsightEX" },
       "overview": {
-        "problem": "Retailers lack real-time visibility into customer foot traffic, dwell bottlenecks, and staff assistance needs, while standard CCTV surveillance poses serious customer privacy risks and fails under real-world occlusions.",
-        "solution": "An end-to-end computer vision retail intelligence engine combining YOLOv8 pose estimation, DeepSORT tracking, 2D Gaussian foot-traffic heatmaps with temporal decay, GDPR face anonymization, and a multi-client live web dashboard.",
+        "problem": "Retailers lack real-time visibility into foot traffic and dwell bottlenecks, while raw CCTV analytics compromise shopper privacy and break under crowd occlusions.",
+        "solution": "An end-to-end computer vision retail engine combining YOLOv8 pose estimation, DeepSORT tracking, 2D ground-contact Gaussian heatmaps, GDPR face anonymization, and a live 30 FPS web dashboard.",
         "role": "Creator & Lead Developer"
       },
       "gallery": [
         {
           "src": "/images/projects/insightex/hero.png",
-          "type": "hero",
           "title": "Real-Time Tracking & Heatmap Dashboard",
-          "description": "Multi-person pose tracking, 2D Gaussian foot-traffic heatmap accumulation, dwell-time analytics, and exclusion zone boundary monitoring."
+          "description": "Multi-person pose tracking, 2D Gaussian foot-traffic heatmap accumulation, dwell-time analytics, and exclusion zone monitoring."
         },
         {
           "src": "/images/projects/insightex/out1.png",
-          "type": "feature",
           "title": "Store Floor Traffic & Density Mapping",
-          "description": "Perspective-accurate 2D Gaussian density splatting tracking foot-traffic hotspots and customer paths across the retail floor."
+          "description": "Perspective-accurate 2D Gaussian density splatting tracking foot-traffic hotspots across the retail floor."
         },
         {
           "src": "/images/projects/insightex/out2.png",
-          "type": "feature",
           "title": "Dwell-Time Monitoring & Bottleneck Detection",
-          "description": "Automated dwell-time threshold tracking identifying shopper interest zones and high-congestion retail sections."
+          "description": "Automated dwell-time threshold tracking identifying shopper interest zones and high-congestion sections."
         },
         {
           "src": "/images/projects/insightex/out3.png",
-          "type": "feature",
           "title": "Exclusion Zone Perimeter Monitoring",
-          "description": "Custom polygon boundary surveillance triggering instant alerts for restricted staff-only or high-security areas."
+          "description": "Custom polygon boundary surveillance triggering instant alerts for restricted staff-only areas."
         }
       ],
       "features": [
         {
-          "name": "Real-Time Person Tracking & Dwell Alerts",
-          "description": "DeepSORT tracking with an occlusion grace period (TRACK_LOST_GRACE_SECONDS = 3.0s) prevents dwell timer resets during temporary camera occlusions, triggering automated alerts when customer dwell thresholds are exceeded."
+          "name": "GDPR Face & Keypoint Anonymization",
+          "description": "Automated facial blurring guided by 5 facial keypoints with upper-body fallback (`--anonymize`) for privacy compliance."
         },
         {
-          "name": "Perspective-Accurate 2D Gaussian Heatmaps",
-          "description": "Ground-contact footprint splatting with exponential temporal decay (lambda = 0.995) eliminates perspective scale bias and floor saturation, providing true spatial hotspot visualization without blue colormap artifacts."
-        },
-        {
-          "name": "GDPR & CCTV Privacy Face Anonymization",
-          "description": "Automated facial blurring guided by 5 facial keypoints with upper-body fallback ensures complete customer privacy compliance without compromising downstream tracking or analytics."
-        },
-        {
-          "name": "Glassmorphism Live Web Dashboard",
-          "description": "Multi-threaded HTTP streaming server delivering 30 FPS MJPEG video, real-time KPI counters, active dwell alerts feed, and interactive in-browser exclusion zone polygon drawing."
+          "name": "Live Web Dashboard & Polygon Zones",
+          "description": "30 FPS MJPEG live streaming, real-time KPI counters, dwell alerts, and in-browser exclusion zone polygon drawing."
         },
         {
           "name": "Hardware-Adaptive Inference Pipeline",
-          "description": "Intelligent execution routing supporting NVIDIA CUDA GPU acceleration with automatic fallback to Intel OpenVINO IR and native PyTorch CPU."
+          "description": "Automatic compute routing across NVIDIA CUDA GPUs, Intel OpenVINO IR, and CPU fallback."
         }
       ],
       "technicalDecisions": [
         {
-          "decision": "Ground-Contact Footprint Splatting over Bounding Box Fill",
+          "decision": "Ground-Contact Footprint Splatting (λ = 0.995)",
           "technology": "2D Gaussian Kernel (OpenCV & NumPy)",
-          "reasoning": "Splats density exclusively at the person's floor-contact coordinates rather than painting entire bounding boxes, eliminating perspective scale distortion between foreground and background camera planes."
+          "reasoning": "Splats density at floor-contact coordinates with exponential temporal decay rather than bounding boxes, eliminating camera-plane perspective bias."
         },
         {
-          "decision": "Occlusion-Tolerant Tracker State Lifecycle",
-          "technology": "DeepSORT & Temporal State Caching",
-          "reasoning": "Decoupled track deletion from frame-level detector misses with a 3.0s grace window and clean appearance embeddings, eliminating flickering IDs and false dwell resets in crowded retail environments."
+          "decision": "Occlusion-Tolerant Track Lifecycle (3.0s Grace)",
+          "technology": "DeepSORT & Clean ReID Frame Buffer",
+          "reasoning": "Decouples track deletion from detector misses with a 3.0s grace window and extracts embeddings from untouched frames so UI overlays never corrupt ReID."
         },
         {
-          "decision": "Isolated Clean Frame Ingestion for ReID",
-          "technology": "OpenCV Memory Pipeline",
-          "reasoning": "Maintains an untouched frame copy strictly for deep appearance feature extraction so that UI overlays, bounding boxes, and skeleton lines never corrupt tracker re-identification accuracy."
-        },
-        {
-          "decision": "Zero-Dependency Multi-Threaded Web Server",
-          "technology": "Python ThreadingHTTPServer & Server-Sent Streams",
-          "reasoning": "Avoids heavyweight web framework dependencies and event-loop threading conflicts with PyTorch/OpenCV, delivering ultra-low-latency MJPEG feeds and JSON telemetry to web clients."
+          "decision": "Zero-Dependency Multi-Threaded Streaming Server",
+          "technology": "Python ThreadingHTTPServer",
+          "reasoning": "Avoids async event-loop conflicts with PyTorch and OpenCV while delivering low-latency MJPEG frames and JSON telemetry."
         }
       ],
-      "architecture": null,
-      "challenges": [],
-      "metrics": [],
-      "learnings": [],
-      "future": []
+      "architecture": [
+        { "layer": "Video Ingest", "detail": "OpenCV Clean Frame Pipeline (Untouched Copy for ReID)" },
+        { "layer": "Inference", "detail": "YOLOv8-Pose (NVIDIA CUDA / Intel OpenVINO / CPU Auto-Fallback)" },
+        { "layer": "Tracking & Analytics", "detail": "DeepSORT (3.0s Grace) + 2D Gaussian Footprints (λ=0.995) + GDPR Blur" },
+        { "layer": "Live Dashboard", "detail": "Multi-Threaded HTTP Server Streaming 30 FPS MJPEG & Telemetry" }
+      ],
+      "metrics": [
+        { "label": "Stream Rate", "value": "30 FPS" },
+        { "label": "Compute Backends", "value": "CUDA / OpenVINO" },
+        { "label": "Occlusion Grace", "value": "3.0s" },
+        { "label": "Privacy Mode", "value": "5-Keypoint GDPR" }
+      ]
     }
   ],
   "certifications": [
     {
       "title": "Oracle Cloud Infrastructure 2025 Data Science Professional",
       "issuer": "Oracle",
-      "year": "2025",
-      "link": null
+      "year": "2025"
     },
     {
       "title": "Google Cloud Data Analytics",
       "issuer": "Google Cloud Skills Boost",
-      "year": "2024",
-      "link": null
+      "year": "2024"
+    },
+    {
+      "title": "MERN Full Stack Development",
+      "issuer": "Cisco ThingQbator"
+    },
+    {
+      "title": "Python Programming (AD141 - RHA)",
+      "issuer": "Red Hat"
+    },
+    {
+      "title": "JavaScript Essentials 2",
+      "issuer": "Cisco Networking Academy"
     },
     {
       "title": "Android 14 & Kotlin Development Masterclass",
       "issuer": "Udemy",
-      "year": "2024",
-      "link": null
-    },
-    {
-      "title": "Java Programming Fundamentals",
-      "issuer": "Infosys Springboard",
-      "year": "2023",
-      "link": null
+      "year": "2024"
     }
   ]
 }

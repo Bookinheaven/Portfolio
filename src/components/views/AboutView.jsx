@@ -1,11 +1,12 @@
 import { useMemo } from 'react';
-import { motion } from 'framer-motion';
 import data from '../../data/portfolio.json';
+import { Card, CardContent } from '@/components/ui/card';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { Separator } from '@/components/ui/separator';
 
 const AboutView = ({ id }) => {
-  const { about, projects = [] } = data;
+  const { about, personal, projects = [] } = data;
 
-  // Dynamically derive timeline by grouping projects by start year and milestone notes
   const timelineData = useMemo(() => {
     const projectsByYear = {};
     projects.forEach((p) => {
@@ -24,15 +25,13 @@ const AboutView = ({ id }) => {
       const projectList = projectsByYear[year];
       const milestoneNote = milestones[year];
 
-      let description = '';
+      let description = milestoneNote || '';
       if (projectList && projectList.length > 0) {
-        const formattedNames = projectList.length > 1
-          ? `${projectList.slice(0, -1).join(', ')} & ${projectList[projectList.length - 1]}`
-          : projectList[0];
-
-        description = milestoneNote ? `${formattedNames} (${milestoneNote})` : formattedNames;
-      } else {
-        description = milestoneNote || '';
+        const formattedNames =
+          projectList.length > 1
+            ? `${projectList.slice(0, -1).join(', ')} & ${projectList[projectList.length - 1]}`
+            : projectList[0];
+        description = milestoneNote ? `${formattedNames} — ${milestoneNote}` : formattedNames;
       }
 
       return {
@@ -44,38 +43,78 @@ const AboutView = ({ id }) => {
   }, [about.milestones, projects]);
 
   return (
-    <section id={id} className="w-screen shrink-0 h-screen snap-start overflow-y-auto overflow-x-hidden hide-scrollbar relative">
-      <div className="min-h-full flex flex-col justify-center px-8 md:px-16 lg:px-24 py-24">
-        <div className="max-w-[1400px] w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-          
-          {/* Story Side */}
-          <div>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-8">About Me</h2>
-            
-            <div className="space-y-6 text-lg text-vercel-accents-4 leading-relaxed mb-12">
+    <section
+      id={id}
+      className="w-screen shrink-0 h-screen snap-start overflow-y-auto overflow-x-hidden hide-scrollbar relative"
+    >
+      <div className="min-h-full flex flex-col justify-center px-6 sm:px-10 md:px-16 lg:px-24 pt-10 pb-24">
+        <div className="max-w-[1360px] w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+          {/* Left Column: Background & Education */}
+          <div className="lg:col-span-5 space-y-5">
+            <div className="select-none">
+              <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground mb-1.5">
+                Background
+              </p>
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
+                About Me
+              </h2>
+            </div>
+
+            <div className="space-y-3 text-sm md:text-[15px] text-ink-secondary leading-relaxed">
               {about.story.map((paragraph, idx) => (
                 <p key={idx}>{paragraph}</p>
               ))}
             </div>
 
-            <div className="grid grid-cols-2 gap-8">
+            {personal.education && (
+              <>
+                <Separator />
+                <div className="flex items-start justify-between gap-4 select-none">
+                  <div>
+                    <div className="text-[11px] font-mono uppercase tracking-wider text-muted-foreground mb-1">
+                      Education
+                    </div>
+                    <div className="text-sm font-medium text-foreground">
+                      {personal.education.institution}
+                    </div>
+                    <div className="text-xs text-ink-secondary mt-0.5">
+                      {personal.education.degree}
+                    </div>
+                  </div>
+                  <div className="text-right shrink-0">
+                    <div className="text-xs font-mono font-medium text-foreground">
+                      CGPA {personal.education.cgpa}
+                    </div>
+                    <div className="text-[11px] font-mono text-muted-foreground mt-0.5">
+                      {personal.education.period}
+                    </div>
+                  </div>
+                </div>
+              </>
+            )}
+
+            <Separator />
+
+            <div className="grid grid-cols-2 gap-6 select-none">
               <div>
-                <h3 className="text-sm font-mono text-white mb-4 uppercase tracking-wider">Current Focus</h3>
-                <ul className="space-y-2">
+                <h3 className="text-[11px] font-mono text-muted-foreground mb-2 uppercase tracking-wider">
+                  Core Focus
+                </h3>
+                <ul className="space-y-1">
                   {about.currentFocus.map((item, idx) => (
-                    <li key={idx} className="flex items-center text-vercel-accents-5 text-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-white/30 mr-3" />
+                    <li key={idx} className="text-xs text-ink-secondary">
                       {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div>
-                <h3 className="text-sm font-mono text-white mb-4 uppercase tracking-wider">Currently Exploring</h3>
-                <ul className="space-y-2">
+                <h3 className="text-[11px] font-mono text-muted-foreground mb-2 uppercase tracking-wider">
+                  Exploring
+                </h3>
+                <ul className="space-y-1">
                   {about.currentlyExploring.map((item, idx) => (
-                    <li key={idx} className="flex items-center text-vercel-accents-5 text-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-white/30 mr-3" />
+                    <li key={idx} className="text-xs text-ink-secondary">
                       {item}
                     </li>
                   ))}
@@ -84,44 +123,104 @@ const AboutView = ({ id }) => {
             </div>
           </div>
 
-          {/* Timeline / Visual Side */}
-          <div className="relative w-full h-full min-h-[60vh] flex items-center justify-center py-12">
-            <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
-            
-            <div className="relative z-10 w-full vercel-card p-8 lg:p-12">
-              <h3 className="text-xl font-bold mb-6">Engineering Timeline</h3>
-              
-              <div className="space-y-12 relative before:absolute before:inset-0 before:ml-2.5 md:before:ml-auto md:before:mr-auto before:-translate-x-px md:before:translate-x-0 before:h-full before:w-[2px] before:bg-gradient-to-b before:from-transparent before:via-white/20 before:to-transparent">
-                
-                {timelineData.map((item, index) => (
-                  <motion.div 
-                    key={item.year}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.2, duration: 0.5 }}
-                    viewport={{ once: true, margin: "-50px" }}
-                    className={`relative flex items-center justify-between md:justify-normal group ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}
-                  >
-                    <div className={`flex items-center justify-center w-6 h-6 rounded-full border-2 z-10 absolute left-0 md:left-1/2 -translate-x-1/2 transition-all duration-300 ${item.active ? 'border-white bg-black shadow-[0_0_15px_rgba(255,255,255,0.8)] scale-110' : 'border-white/20 bg-black group-hover:border-white/60 group-hover:scale-110'}`}>
-                      <div className={`w-2 h-2 rounded-full transition-colors duration-300 ${item.active ? 'bg-white' : 'bg-transparent group-hover:bg-white/50'}`} />
-                    </div>
-                    
-                    <div className={`w-[calc(100%-3rem)] md:w-[calc(50%-3rem)] pl-10 md:pl-0 ${index % 2 === 0 ? 'md:pr-12 text-left md:text-right' : 'md:pl-12 text-left'}`}>
-                      <motion.div 
-                        whileHover={{ x: index % 2 === 0 ? -5 : 5 }}
-                        className="p-4 rounded-xl bg-white/5 border border-white/5 hover:border-white/20 transition-colors backdrop-blur-sm"
-                      >
-                        <div className={`text-2xl font-black mb-1 transition-colors duration-300 ${item.active ? 'text-white' : 'text-vercel-accents-4 group-hover:text-white'}`}>{item.year}</div>
-                        <div className="text-sm font-medium text-vercel-accents-5">{item.description}</div>
-                      </motion.div>
-                    </div>
-                  </motion.div>
-                ))}
+          {/* Right Column: Shadcn Tabs + Card Ledger (Fits comfortably inside 100vh) */}
+          <div className="lg:col-span-7">
+            <Card className="rounded-2xl">
+              <CardContent className="p-6 lg:p-7">
+                <Tabs defaultValue="experience" className="gap-5">
+                  <div className="flex items-center justify-between gap-4 pb-3 border-b border-border select-none">
+                    <TabsList>
+                      <TabsTrigger value="experience">Experience & Hackathons</TabsTrigger>
+                      <TabsTrigger value="timeline">Timeline</TabsTrigger>
+                    </TabsList>
+                    <span className="text-[11px] font-mono text-muted-foreground hidden sm:inline">
+                      2023 — Present
+                    </span>
+                  </div>
 
-              </div>
-            </div>
+                  <TabsContent value="experience" className="space-y-5">
+                    {about.experience?.length > 0 && (
+                      <div>
+                        <div className="text-[11px] font-mono uppercase tracking-wider text-muted-foreground mb-2 select-none">
+                          Internships & Training
+                        </div>
+                        <div className="divide-y divide-border">
+                          {about.experience.map((exp, idx) => (
+                            <div key={idx} className="py-2.5 first:pt-0 last:pb-0">
+                              <div className="flex flex-wrap items-baseline justify-between gap-2">
+                                <div className="text-sm font-medium text-foreground">
+                                  {exp.role}{' '}
+                                  <span className="text-ink-secondary font-normal">
+                                    · {exp.organization}
+                                  </span>
+                                </div>
+                                <span className="text-[11px] font-mono text-muted-foreground select-none">
+                                  {exp.period}
+                                </span>
+                              </div>
+                              <p className="text-xs text-ink-secondary mt-1 leading-relaxed">
+                                {exp.summary}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {about.achievements?.length > 0 && (
+                      <div className="pt-4 border-t border-border">
+                        <div className="text-[11px] font-mono uppercase tracking-wider text-muted-foreground mb-2 select-none">
+                          Hackathons & Leadership
+                        </div>
+                        <div className="divide-y divide-border">
+                          {about.achievements.map((ach, idx) => (
+                            <div
+                              key={idx}
+                              className="py-2 first:pt-0 last:pb-0 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4"
+                            >
+                              <div className="min-w-0">
+                                <span className="text-sm font-medium text-foreground">
+                                  {ach.event}
+                                </span>
+                                <span className="text-xs text-ink-secondary block sm:inline sm:ml-2">
+                                  — {ach.title}
+                                </span>
+                              </div>
+                              <span className="text-[11px] font-mono text-muted-foreground shrink-0 select-none">
+                                {ach.year}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </TabsContent>
+
+                  <TabsContent value="timeline">
+                    <div className="pl-4 border-l border-border space-y-5 py-1">
+                      {timelineData.map((item) => (
+                        <div key={item.year} className="relative pl-4">
+                          <span
+                            className={`absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full border ${
+                              item.active
+                                ? 'bg-foreground border-foreground'
+                                : 'bg-card border-muted-foreground'
+                            }`}
+                          />
+                          <div className="text-sm font-mono font-semibold text-foreground select-none">
+                            {item.year}
+                          </div>
+                          <div className="text-xs sm:text-sm text-ink-secondary mt-1 leading-relaxed">
+                            {item.description}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </TabsContent>
+                </Tabs>
+              </CardContent>
+            </Card>
           </div>
-
         </div>
       </div>
     </section>
